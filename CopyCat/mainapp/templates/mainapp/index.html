@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% block body %}
+<h3><a href="{% url 'mainapp:logout' %}">Logout</a></h3>
 
-</body>
-</html>
+    <h1> Hello {{ user }} After login</h1>
+
+    <a href="{% url 'mainapp:bookmark' %}">Bookmarks</a><span>
+    <!--<a href="{% url
+    'mainapp:profile'
+    %}">Profile</a>
+    -->
+
+
+{% endblock %}

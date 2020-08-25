@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% block content %}
 
-</body>
-</html>
+    {% if bookmarks is not None %}
+        <ol>
+            {% for obj in bookmarks %}
+            <li><a href="{% url 'mainapp:detail' url_id %}">{{ obj.url_id }}</a></li>
+            {% endfor %}
+        </ol>
+    {% else %}
+
+        <b>There are no bookmarks.</b>
+
+    {% endif %}
+
+{% endblock %}
