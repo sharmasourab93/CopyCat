@@ -4,10 +4,6 @@
     <h1> Hello {{ user }} After login</h1>
 
     <a href="{% url 'mainapp:bookmark' %}">Bookmarks</a><span>
-    <!--<a href="{% url
-    'mainapp:profile'
-    %}">Profile</a>
-    -->
-
+    <a href="{% url 'mainapp:profile' user %}">Profile</a>
 
 {% endblock %}
