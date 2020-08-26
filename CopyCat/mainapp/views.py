@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.shortcuts import HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout, authenticate
@@ -52,13 +51,14 @@ def logout(request):
 
 @login_required
 def index(request):
-    
-    return render(request, 'mainapp/index.html')
+    user = {'user': request.user}
+    return render(request, 'mainapp/index.html', user)
 
 
 @login_required
-def profile(request):
-    return render(request, "profile")
+def profile(request, user):
+    user_ = {'user': request.user}
+    return render(request, "mainapp/profile.html", user_)
 
 
 @login_required

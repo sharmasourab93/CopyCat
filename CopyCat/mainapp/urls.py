@@ -20,7 +20,7 @@ urlpatterns = [
     path('index/', index, name='index'),
     
     #User's Profile View
-    #path('profile/^(?P<pk>\d+)$', profile, name='profile'),
+    path(r'profile/<user>', profile, name='profile'),
     
     # Bookmarks or List View
     path('bookmark/', bookmark, name='bookmark'),
