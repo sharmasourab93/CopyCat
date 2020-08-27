@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, Http404
+from django.http import HttpResponseForbidden
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout, authenticate
@@ -9,6 +10,11 @@ from .forms import LoginForm
 def sign_up(request):
     context = {}
     form = UserCreationForm(request.POST or None)
+    
+    if request.user.is_active and request.user.is_authenticated:
+        
+        return HttpResponseForbidden()
+    
     if request.method == "POST":
         if form.is_valid():
             user = form.save()
@@ -22,6 +28,10 @@ def sign_up(request):
 def login_user(request):
     context = dict()
     form = LoginForm()
+    another_form = UserCreationForm(request.POST or None)
+
+    if request.user.is_active and request.user.is_authenticated:
+        return HttpResponseForbidden()
     
     if request.method == 'GET':
         context = {'form': form}
@@ -63,10 +73,9 @@ def profile(request, user):
 
 @login_required
 def bookmark(request):
-    bookmark = {'abc': 'abc'}
+    bookmark = dict()
     user = {'user': User.username}
-    
-    return render(request, "mainapp/bookmarks.html", bookmark, user)
+    return render(request, "mainapp/bookmarks.html", bookmark)
 
 
 @login_required
