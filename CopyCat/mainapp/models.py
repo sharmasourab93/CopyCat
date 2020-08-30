@@ -27,7 +27,7 @@ class NewsFeed(models.Model):
         3. Comments
         
     """
-    id = models.IntegerField(primary_key=True)
+    id = models.AutoField(primary_key=True)
     
     # URL & Title can be extracted together
     url = models.CharField(max_length=255, unique=True)
@@ -44,6 +44,7 @@ class NewsFeed(models.Model):
     
     # Upvotes posted in Points
     upvotes = models.IntegerField()
+    
     # Comments redirect to H-ID'd page.
     comments = models.IntegerField()
     

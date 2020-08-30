@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.urls import path
 from .views import index, sign_up, logout, login_user, password_change
 from .views import profile, bookmark
+# from .views import deleteitem
 
 app_name = 'mainapp'
 
@@ -26,4 +27,7 @@ urlpatterns = [
     path('bookmark/', bookmark, name='bookmark'),
     # Detail View/ View at every news Item
     # path('bookmark/^(?P<url_id>\w+)$', bookmark_detail, name="details"),
+    
+    # Delete View
+    # path(r'^index/deleteitem/(?P<hid>\w+)$', deleteitem, name="deleteitem")
     ]
