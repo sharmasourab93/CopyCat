@@ -1,6 +1,48 @@
-1. Apps can be installed anywhere within in the python path
+Agenda:
+1. Build a Base Project With Minimal UI
+2. Build a Base Project with View Functions
+    i. Cover Login
+    ii. Profile
+    iii. Parser Logic & Insertion
+    iv. Index Views
+    v. Read, Delete & Bookmark Template Views
+3. Re-build Project with View Classes.
+4. Write Test Cases
 
-2. A model is the single, definitive source of truth about your data.
-   It contains the essential fields and behaviors of the data you’re storing.
-   Django follows the DRY Principle.
-   The goal is to define your data model in one place and automatically derive things from it.
+########Base Project Completion ###############
+ 
+ 1. Deploy the application with Gunicorn
+ 2. Deploy the Application with MySQL Container 
+ 3. Deploy the Application with Nginx 
+	A Docker Container's docker-compose.yml with the above three
+ 4. Extending with Kubernetes/Minikube
+
+
+
+Objective
+
+By 27/08/2020 Complete Login & Session, Profile, URL, Bookmarks
+
+Items Completed by Date
+
+24/08/2020 - Skeleton, Architecture
+25/08/2020 - Update On Login, Logout, Sign Up, Bookmark Skeleton
+26/08/2020 - DB & Migrations
+27/08/2020 - UI Base template for Mainapp & Registration
+28/08/2020 - Parser & DB Insertion logic
+30/08/2020 - Index Page Population Logic & Parser Table Updation
+
+Items Planned to complete
+31/08/2020 - Action Buttons On Index page
+01/09/2020 - Profile Page
+
+
+Db
+    1. Auth.user
+    2. user actions
+        i. user specific records for Profile
+        ii.  Book mark
+        iii. Read field
+        iv. Delete field
+    3. Common News Table
+
