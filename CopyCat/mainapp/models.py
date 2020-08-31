@@ -2,6 +2,7 @@ from django.db import models
 from django.shortcuts import redirect
 from django.contrib.auth.models import User
 from django.urls import reverse
+from datetime import datetime, timedelta
 
 
 # Create your models here.
@@ -39,14 +40,48 @@ class NewsFeed(models.Model):
     
     # author name
     author = models.CharField(max_length=50)
-    posted_on = models.CharField(max_length=50)
-    date = models.DateField(auto_now_add=True)
+    
+    # posted_on was initially taken as a character
+    # and displayed as such. Requirement is to display in
+    # reverse chronological order.
+    # One way to do can be to preserver the character field input,
+    # but priority is to have the field in DateTimeField type
+    
+    # Parser model returns input in the time format,
+    # hence the below two lines are commented out.
+    
+    # posted_on = models.CharField(max_length=50)
+    # datefield = models.DateField(blank=True, null=True)
+    
+    # News field model altered on 31-08-2020.
+    posted_on = models.DateTimeField(blank=True, null=True)
     
     # Upvotes posted in Points
     upvotes = models.IntegerField()
     
     # Comments redirect to H-ID'd page.
     comments = models.IntegerField()
+    
+    """
+    # The below given method overrides saving of the field to prefill
+    # for fields where entry hasn't be consumed in the arguments.
+    # The below method is commented out as the parser module
+    # returns in DateTimeField format from the provided CharField.
+    def save(self, *args, **kwargs):
+        if self.datefield is None:
+            if 'minutes' in self.posted_on:
+                self.datefield = datetime.now() - \
+                                 timedelta(minutes=
+                                           int(self.posted_on
+                                               .split()[0]))
+                
+            else:
+                self.datefield = datetime.now() - \
+                                 timedelta(hours=
+                                           int(self.posted_on
+                                               .split()[0]))
+        super(NewsFeed, self).save(*args, **kwargs)
+    """
     
     def __str__(self):
         return " " + str(self.url) + \
