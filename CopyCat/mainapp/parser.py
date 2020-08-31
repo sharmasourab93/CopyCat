@@ -2,13 +2,31 @@ from bs4 import BeautifulSoup
 import requests
 from re import compile
 from itertools import chain
+from datetime import timedelta, datetime
 
 
 class ParserClass:
     
-    def get_fields(self):
+    def get_time_field(self, posted_arr):
+        new_posted_arr = []
         
+        for i in posted_arr:
+            integer, time, ago = i.split()
+            
+            if time == 'minutes':
+                x = datetime.now() - timedelta(minutes=int(integer))
+                new_posted_arr.append(x)
+                
+            else:
+                x = datetime.now() - timedelta(hours=int(integer))
+                new_posted_arr.append(x)
+                
+        return new_posted_arr
+        
+    def get_fields(self):
+        pattern = compile(r"\d+")
         set_of_three = list()
+        
         for i in range(1, 4):
             url = "https://news.ycombinator.com/news?p={0}"\
                 .format(str(i))
@@ -34,16 +52,21 @@ class ParserClass:
             author = [i.text
                       for i in soup.find_all("a",
                                              {"class": "hnuser"})]
-            
-            # Hacker ID or Hackernews URL
-            hurl = [i.text
-                    for i in soup.find_all("span",
-                                           {"class": "age"})]
-            
+
             # Posted Time
-            posted_on = [i.a.get('href')
+            posted_on = [i.text
                          for i in soup.find_all("span",
                                                 {"class": "age"})]
+            print(posted_on)
+            posted_on = self.get_time_field(posted_on)
+            posted_on = ["{:%d-%m-%Y %H:%M:%S}".format(i)
+                         for i in posted_on]
+
+            # Hacker ID or Hackernews URL
+            hurl = [pattern.findall(i.a.get('href'))[0]
+                    for i in soup.find_all("span",
+                                           {"class": "age"})]
+            print()
             
             # Comments Count
             comments = [i.text
@@ -57,8 +80,6 @@ class ParserClass:
 
             new_comments = []
             
-            pattern = compile(r"\d+")
-            
             for i in comments:
                 try:
                     new_comments.append(pattern.findall(i)[0])
@@ -66,12 +87,12 @@ class ParserClass:
                     new_comments.append(0)
                 
             # Filtered Comments
-            new_comments = list(map(int, new_comments))
+            comments = list(map(int, new_comments))
             
             zipped = list(zip(url, title,
                               hurl, author,
                               posted_on, upvotes,
-                              new_comments)
+                              comments)
                           )
             
             set_of_three.append(zipped)
