@@ -57,7 +57,6 @@ class ParserClass:
             posted_on = [i.text
                          for i in soup.find_all("span",
                                                 {"class": "age"})]
-            print(posted_on)
             posted_on = self.get_time_field(posted_on)
             posted_on = ["{:%d-%m-%Y %H:%M:%S}".format(i)
                          for i in posted_on]
@@ -66,7 +65,6 @@ class ParserClass:
             hurl = [pattern.findall(i.a.get('href'))[0]
                     for i in soup.find_all("span",
                                            {"class": "age"})]
-            print()
             
             # Comments Count
             comments = [i.text
