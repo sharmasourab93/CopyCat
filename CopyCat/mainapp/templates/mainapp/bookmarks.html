@@ -1,17 +1,61 @@
 {% extends 'mainapp/base.html' %}
-
 {% block content %}
 
-    {% if bookmarks is not None %}
-        <ol>
-            {% for obj in bookmarks %}
-            <li><a href="{% url 'mainapp:detail' url_id %}">{{ obj.url_id }}</a></li>
-            {% endfor %}
+    <div class="container-fluid songs-container">
+    {% if data %}
+    <center>
+        <ol class="nav nav-pills" style="margin-bottom: 10px;">
+            <table>
+                {% for d in data %}
+                    <li role="presentation" class="active">
+                        <div class="container-fluid">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span>{{ forloop.counter }}</span>
+                                        <span>&nbsp;</span>
+                                        <span>&nbsp;</span>
+                                        <span>&nbsp;</span>
+                                        <a href="{{d.url}}">{{ d.title }}</a>
+                                    </td>
+                                </tr>
+                                <tr style="font-size:12px;">
+                                    <span>&nbsp;&nbsp;&nbsp;</span>
+                                    <td>
+                                        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                        <a href="https://news.ycombinator.com/item?id={{d.hid}}">{{d.comments}} comments </a> by <a href="#">{{d.author}}</a>
+                                        posted {{d.posted_on}} | Upvotes {{d.upvotes}}
+                                    </td>
+
+                                        <!--<td>
+                                            <form action="read/item?id={{d.hid}}/" method="POST" class="icon-color-green">
+                                                <button type="submit" value="Read" title="Read" aria-label="Read">
+                                                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                                </button>
+                                            </form>
+                                        </td>-->
+
+                                    <td>
+                                        <form action="unbookmark/{{d.hid}}" method="GET" class="icon-color-green">
+
+                                            <button type="submit" title="Bookmark">
+                                                <span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <tr style="height:10px;"></tr>
+                            </tbody>
+                        </div>
+                    </li>
+                {% endfor %}
+            </table>
         </ol>
+        <center>
     {% else %}
-
-        <b>There are no bookmarks.</b>
-
+        No Items. Working on it.
     {% endif %}
+</div>
 
 {% endblock content %}

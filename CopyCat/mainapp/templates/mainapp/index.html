@@ -24,12 +24,12 @@
                                     <td>
                                         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                        <a href="https://news.ycombinator.com/{{d.hid}}">{{d.comments}} comments </a> by <a href="#">{{d.author}}</a>
+                                        <a href="https://news.ycombinator.com/item?id={{d.hid}}">{{d.comments}} comments </a> by <a href="#">{{d.author}}</a>
                                         posted {{d.posted_on}} | Upvotes {{d.upvotes}}
                                     </td>
 
                                         <td>
-                                            <form action="read/{{d.hid}}" method="POST" class="icon-color-green">
+                                            <form action="read/item?id={{d.hid}}/" method="POST" class="icon-color-green">
                                                 <button type="submit" value="Read" title="Read" aria-label="Read">
                                                     <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                                                 </button>
@@ -37,8 +37,9 @@
                                         </td>
 
                                         <td>
-                                            <form action="bookmark/{{d.hid}}" method="POST" class="icon-color-green">
+                                            <form action="bookmark/{{d.hid}}/" method="POST" class="icon-color-green">
                                                 <button type="submit" title="Bookmark">
+                                                    {% csrf_token %}
                                                     <span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
                                                 </button>
                                             </form>
@@ -46,7 +47,7 @@
 
                                         <td>
                                             <!--Action Block for delete item completed in Template-->
-                                            <form action="deleteitem/{{d.hid}}" method="POST" class="icon-color-red">
+                                            <form action="deleteitem/{{d.hid}}/" method="POST" class="icon-color-red">
                                                 {% csrf_token %}
                                                 <button type="submit" title="Delete">
                                                     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
