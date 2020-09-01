@@ -31,10 +31,15 @@ Items Completed by Date
 27/08/2020 - UI Base template for Mainapp & Registration
 28/08/2020 - Parser & DB Insertion logic
 30/08/2020 - Index Page Population Logic & Parser Table Updation
+31/08/2020 - Action Buttons On Index page, Reverse Chronological Order
+01/09/2020 - Bookmarks & Delete Items
 
 Items Planned to complete
-31/08/2020 - Action Buttons On Index page
-01/09/2020 - Profile Page
+02/09/2020 - Mark as Read and Segregating Read Items
+03/09/2020 - Limit Views to 30 On a page
+04/09/2020 - Remaining TODO List
+05/09/2020 - Remaining TODO List & Template classes
+06/09/2020 - Write Test cases
 
 
 Db
