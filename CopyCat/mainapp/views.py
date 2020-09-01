@@ -1,7 +1,12 @@
 from django.shortcuts import render, Http404, redirect
+from django.shortcuts import HttpResponseRedirect, HttpResponse
 from django.http import HttpResponseForbidden
 from django.db.utils import IntegrityError
 from django.core.exceptions import ObjectDoesNotExist
+
+# django Urls related
+from django.urls import reverse
+from django.urls.exceptions import NoReverseMatch
 
 # Imports related to Auth
 from django.contrib.auth.models import User
@@ -10,7 +15,9 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
 
 # Imports related to Models, Forms, Parser
-from .models import NewsFeed, Profile, UserDeleted
+from .models import NewsFeed, Profile
+from .models import Bookmarks
+from .models import UserDeleted, UserRead
 from .forms import LoginForm
 from .parser import ParserClass
 
@@ -74,22 +81,23 @@ def logout(request):
 @login_required
 def deleteitem(request, hid):
     
-    if request.user.is_active:
+    if request.user.is_active and request.method == 'POST':
         user = User.objects.get(username=request.user)
-        prof_user = Profile.objects.get(userid=user)
-        hid = NewsFeed.objects.get(hid=hid)
-        userdelete = None
+        prof_user = Profile.objects.get(user=user)
+        hid_ = NewsFeed.objects.get(hid=hid)
+        
         try:
-            t = UserDeleted.objects.get(hid=hid)
+            userdel = UserDeleted.objects.get(hid=hid,
+                                              userid=prof_user)
         
         except ObjectDoesNotExist:
-            userdelete = UserDeleted(userid=prof_user,
-                                     hid=hid,
-                                     delete=True)
+            userdel = UserDeleted(userid=prof_user,
+                                  hid=hid_,
+                                  deleted=True)
             
-        userdelete.save()
+        userdel.save()
     
-    return redirect(request, 'mainapp:index')
+    return redirect('/index/')
         
 
 # Index Page populating logic
@@ -124,8 +132,21 @@ def index(request):
             
         finally:
             t.save()
-        
-    obj = NewsFeed.objects.order_by('posted_on').reverse()
+    
+    # Exclude items that exists in Userdeleted table
+    # 1. Query for the authenticated user.
+    # 2. Profile On the Aunthenticated User.
+    # 3. Query the Deleted Data for the User
+    user = User.objects.get(username=request.user)
+    prof = Profile.objects.get(user=user)
+    userdel = UserDeleted.objects.filter(userid=prof)\
+        .values_list('hid_id', flat=True)
+    
+    # 4. Exclude the deleted Item for the user.
+    obj = NewsFeed.objects.order_by("posted_on").reverse()
+    obj = obj.exclude(id__in=userdel)
+    
+    
     context = {'data': obj}
     return render(request, 'mainapp/index.html', context)
 
@@ -139,10 +160,45 @@ def profile(request, user):
 @login_required
 def bookmark(request):
     bookmark = dict()
-    user = {'user': User.username}
+    user = User.objects.get(username=request.user)
+    prof = Profile.objects.get(user=user)
+    marks = Bookmarks.objects.filter(user=prof)\
+        .values_list('hack_id_id')
+    
+    obj = NewsFeed.objects.filter(id__in=marks).order_by("posted_on")
+    
+    bookmark['data'] = obj
+    
     return render(request, "mainapp/bookmarks.html", bookmark)
 
 
 @login_required
-def bookmark_details(request):
-    pass
+def bookmark_details(request, hid):
+    user = User.objects.get(username=request.user)
+    nfd = NewsFeed.objects.get(hid=hid)
+    prof = Profile.objects.get(user=user)
+    print("Printing HID", hid)
+    if request.user.is_active and request.method == 'POST':
+        try:
+            user_read = Bookmarks.objects.get(hack_id=nfd, user=prof)
+            #TODO: Find a way to figure out bookmarking without
+            # redirecting/re-loading the web page
+            return redirect(reverse('/index/'))
+        
+        except NoReverseMatch:
+            return redirect('/index/')
+            
+        except ObjectDoesNotExist:
+            user_read = Bookmarks(user=prof, hack_id=nfd)
+            user_read.save()
+            return HttpResponseRedirect('/index/')
+    
+    elif request.user.is_active and request.method == 'GET':
+        print(request.method)
+        try:
+            user_read = Bookmarks.objects.get(hack_id=nfd, user=prof)
+            user_read.delete()
+            return redirect('/bookmark/')
+        
+        except ObjectDoesNotExist:
+            return redirect('/bookmark/')
