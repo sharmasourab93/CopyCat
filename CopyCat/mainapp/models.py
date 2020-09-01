@@ -54,7 +54,7 @@ class NewsFeed(models.Model):
     # datefield = models.DateField(blank=True, null=True)
     
     # News field model altered on 31-08-2020.
-    posted_on = models.DateTimeField(blank=True, null=True)
+    posted_on = models.DateTimeField(editable=False, default=datetime.now)
     
     # Upvotes posted in Points
     upvotes = models.IntegerField()
@@ -98,7 +98,7 @@ class Profile(models.Model):
     # Every User is supposed to own a unique profile.
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=100, unique=True)
-    bday = models.DateField()
+    bday = models.DateField(auto_now_add=True)
     email = models.EmailField(unique=True, max_length=100)
     
     def get_absolute_url(self):
@@ -116,7 +116,7 @@ class Bookmarks(models.Model):
     all the bookmarks for the user.
     """
     user = models.ForeignKey(Profile, on_delete=models.DO_NOTHING)
-    hack_id = models.ForeignKey(NewsFeed, unique=True, on_delete=models.DO_NOTHING)
+    hack_id = models.ForeignKey(NewsFeed, on_delete=models.DO_NOTHING)
     bid = models.AutoField(primary_key=True, auto_created=True)
     
     
@@ -125,7 +125,7 @@ class UserRead(models.Model):
     All the bookmarks deleted by the user.
     """
     userid = models.ForeignKey(Profile, on_delete=models.DO_NOTHING)
-    hid = models.ForeignKey(NewsFeed, unique=True, on_delete=models.DO_NOTHING)
+    hid = models.ForeignKey(NewsFeed, on_delete=models.DO_NOTHING)
     read = models.BooleanField(default=True)
     dated = models.DateTimeField(auto_now_add=True)
 
@@ -135,6 +135,6 @@ class UserDeleted(models.Model):
     UserDeleted: Hids that shouldn't be shown to the user.
     """
     userid = models.ForeignKey(Profile, on_delete=models.DO_NOTHING)
-    hid = models.ForeignKey(NewsFeed, unique=True, on_delete=models.DO_NOTHING)
+    hid = models.ForeignKey(NewsFeed, on_delete=models.DO_NOTHING)
     deleted = models.BooleanField(default=True)
     date = models.DateTimeField(auto_now_add=True)

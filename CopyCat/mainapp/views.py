@@ -14,6 +14,8 @@ from .models import NewsFeed, Profile, UserDeleted
 from .forms import LoginForm
 from .parser import ParserClass
 
+# datetime features
+from datetime import datetime
 
 def sign_up(request):
     context = {}
@@ -26,8 +28,7 @@ def sign_up(request):
     if request.method == "POST":
         if form.is_valid():
             user = form.save()
-            login(request, user)
-            return render(request, 'mainapp/index.html')
+            return redirect(request, 'mainapp:login')
         
     context['form'] = form
     return render(request, 'registration/signup.html', context)
@@ -101,8 +102,9 @@ def index(request):
     
     for i in items:
         url, title = i[0], i[1]
-        posted_on, author = i[2], i[3]
-        hid, upvotes, comments = i[4], i[5], i[6]
+        author = i[3]
+        posted_on = datetime.strptime(i[4], "%d-%m-%Y %H:%M:%S")
+        hid, upvotes, comments = i[2], i[5], i[6]
         
         try:
             t = NewsFeed.objects.get(url=url)
@@ -113,7 +115,6 @@ def index(request):
             t = NewsFeed.objects.get(url=url)
             t.comments = comments
             t.upvotes = upvotes
-            t.posted_on = posted_on
             
         except ObjectDoesNotExist:
             t = NewsFeed(url=url, title=title,
@@ -124,7 +125,7 @@ def index(request):
         finally:
             t.save()
         
-    obj = NewsFeed.objects.all()
+    obj = NewsFeed.objects.order_by('posted_on').reverse()
     context = {'data': obj}
     return render(request, 'mainapp/index.html', context)
 
