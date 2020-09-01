@@ -97,9 +97,9 @@ class Profile(models.Model):
     id = models.AutoField(primary_key=True, auto_created=True)
     # Every User is supposed to own a unique profile.
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    name = models.CharField(max_length=100, unique=True)
-    bday = models.DateField(auto_now_add=True)
-    email = models.EmailField(unique=True, max_length=100)
+    name = models.CharField(max_length=100, editable=True, blank=True)
+    bday = models.DateField(editable=True, blank=True)
+    email = models.EmailField(unique=True, max_length=100, blank=True)
     
     def get_absolute_url(self):
         return reverse('mainapp:profile', kwargs={'pk': self.id})
