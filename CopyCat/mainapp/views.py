@@ -24,6 +24,7 @@ from .parser import ParserClass
 # datetime features
 from datetime import datetime
 
+
 def sign_up(request):
     context = {}
     form = UserCreationForm(request.POST or None)
@@ -34,6 +35,7 @@ def sign_up(request):
     
     if request.method == "POST":
         if form.is_valid():
+            #TODO: Extend form to accept Bday, email & Name
             user = form.save()
             return redirect(request, 'mainapp:login')
         
@@ -62,12 +64,6 @@ def login_user(request):
             
         invalid = {'message': "Invalid Login", 'form': form}
         return render(request, "registration/login.html", invalid)
-        
-
-@login_required
-def password_change(request):
-    #TODO: Password Change/Password Forget
-    pass
 
 
 @login_required
@@ -76,29 +72,11 @@ def logout(request):
     return render(request, "registration/logout.html")
 
 
-# Delete Item Logical Function Written.
-# TODO: URL for deleteitem remains.
 @login_required
-def deleteitem(request, hid):
-    
-    if request.user.is_active and request.method == 'POST':
-        user = User.objects.get(username=request.user)
-        prof_user = Profile.objects.get(user=user)
-        hid_ = NewsFeed.objects.get(hid=hid)
-        
-        try:
-            userdel = UserDeleted.objects.get(hid=hid,
-                                              userid=prof_user)
-        
-        except ObjectDoesNotExist:
-            userdel = UserDeleted(userid=prof_user,
-                                  hid=hid_,
-                                  deleted=True)
-            
-        userdel.save()
-    
-    return redirect('/index/')
-        
+def password_change(request):
+    #TODO: Password Change/Password Forget
+    pass
+
 
 # Index Page populating logic
 # written on 30-08-2020
@@ -146,7 +124,6 @@ def index(request):
     obj = NewsFeed.objects.order_by("posted_on").reverse()
     obj = obj.exclude(id__in=userdel)
     
-    
     context = {'data': obj}
     return render(request, 'mainapp/index.html', context)
 
@@ -156,6 +133,8 @@ def profile(request, user):
     user_ = {'user': request.user}
     return render(request, "mainapp/profile.html", user_)
 
+
+#TODO: Marked a Read View
 
 @login_required
 def bookmark(request):
@@ -202,3 +181,25 @@ def bookmark_details(request, hid):
         
         except ObjectDoesNotExist:
             return redirect('/bookmark/')
+
+
+# Delete Item Logical Function Written.
+@login_required
+def deleteitem(request, hid):
+    if request.user.is_active and request.method == 'POST':
+        user = User.objects.get(username=request.user)
+        prof_user = Profile.objects.get(user=user)
+        hid_ = NewsFeed.objects.get(hid=hid)
+        
+        try:
+            userdel = UserDeleted.objects.get(hid=hid,
+                                              userid=prof_user)
+        
+        except ObjectDoesNotExist:
+            userdel = UserDeleted(userid=prof_user,
+                                  hid=hid_,
+                                  deleted=True)
+        
+        userdel.save()
+    
+    return redirect('/index/')
