@@ -1,7 +1,7 @@
 {% extends 'mainapp/base.html' %}
 {% block content %}
 <div class="container-fluid songs-container table-responsive">
-    <div style="text-align: left; margin-left: 25%;margin-top: 10%; margin-right: 25%;">
+    <div style="text-align: left; margin-left: 25%;margin-top: 15%; margin-right: 25%;">
         {% if data and user.is_authenticated %}
             <center>
                 <table class="table">
@@ -23,8 +23,10 @@
                             <td>{{data.email}}</td>
                         </tr>
                     </tbody>
-                </table>
-                <strong><a href="{% url 'mainapp:marked_read' %}">Read History</a></strong>
+                </table><br/>
+                <strong class="belowtable"><a href="{% url 'mainapp:marked_read' %}">Read History</a></strong>
+                <strong class="belowtable">&nbsp; | &nbsp;</strong>
+                <strong class="belowtable"><a href="{% url 'mainapp:password_change' %}">Change Password</a></strong><br/>
             </center>
         {% endif %}
     </div>
