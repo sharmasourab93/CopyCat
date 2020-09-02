@@ -143,8 +143,14 @@ def index(request):
 
 @login_required
 def profile(request, user):
-    user_ = {'user': request.user}
-    return render(request, "mainapp/profile.html", user_)
+    context = {}
+    if request.method == 'GET' and request.user.is_active:
+        user_ = User.objects.get(username=user)
+        prof_ = Profile.objects.get(user=user_)
+        
+        context['data'] = prof_
+        
+    return render(request, "mainapp/profile.html", context)
 
 
 #TODO: Marked a Read View

@@ -1,6 +1,32 @@
 {% extends 'mainapp/base.html' %}
 {% block content %}
-
-    {{user}}
-
+<div class="container-fluid songs-container table-responsive">
+    <div style="text-align: left; margin-left: 25%;margin-top: 10%; margin-right: 25%;">
+        {% if data and user.is_authenticated %}
+            <center>
+                <table class="table">
+                    <tbody style="text-align:center;font-size:22px;">
+                        <tr>
+                            <td>username</td>
+                            <td>@{{user}}</td>
+                        </tr>
+                        <tr>
+                            <td>Name</td>
+                            <td>{{data.name}}</td>
+                        </tr>
+                        <tr>
+                            <td>Date of Birth</td>
+                            <td>{{data.bday}}</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>{{data.email}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <strong><a href="{% url 'mainapp:marked-read' %}">Read History</a></strong>
+            </center>
+        {% endif %}
+    </div>
+</div>
 {% endblock %}
