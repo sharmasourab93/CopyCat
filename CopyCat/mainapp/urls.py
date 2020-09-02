@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, re_path
 from .views import index, sign_up, logout, login_user, password_change
-from .views import profile, bookmark
+from .views import profile, bookmark, filldetails
 from .views import deleteitem, bookmark_details
 
 app_name = 'mainapp'
@@ -16,6 +16,9 @@ urlpatterns = [
     path('accounts/logout', logout, name="logout"),
     # 4. Password Change
     #TODO: Password Change/Reset
+    
+    # 12. Fill User Details
+    path('filldetails/', filldetails, name='filldetails'),
     
     # 5. Index View With News View
     path('index/', index, name='index'),

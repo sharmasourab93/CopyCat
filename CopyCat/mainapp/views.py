@@ -18,7 +18,7 @@ from django.contrib.auth.decorators import login_required
 from .models import NewsFeed, Profile
 from .models import Bookmarks
 from .models import UserDeleted, UserRead
-from .forms import LoginForm
+from .forms import LoginForm, FillUpForm
 from .parser import ParserClass
 
 # datetime features
@@ -35,12 +35,25 @@ def sign_up(request):
     
     if request.method == "POST":
         if form.is_valid():
-            #TODO: Extend form to accept Bday, email & Name
             user = form.save()
-            return redirect(request, 'mainapp:login')
+            login(request, user)
+            return redirect('/filldetails/')
         
     context['form'] = form
     return render(request, 'registration/signup.html', context)
+
+
+@login_required
+def filldetails(request):
+    form = FillUpForm(request.POST or None)
+    
+    if request.method == 'POST':
+        if form.is_valid():
+            profile_ = form.save()
+            return redirect('/index/')
+    
+    context = {'form': form}
+    return render(request, 'registration/details_page.html', context)
 
 
 def login_user(request):
