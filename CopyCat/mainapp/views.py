@@ -1,23 +1,20 @@
-from django.shortcuts import render, Http404, redirect
-from django.shortcuts import HttpResponseRedirect, HttpResponse
+from django.shortcuts import render, redirect, HttpResponse
 from django.http import HttpResponseForbidden
 from django.db.utils import IntegrityError
 from django.core.exceptions import ObjectDoesNotExist
 
-# django Urls related
-from django.urls import reverse
-from django.urls.exceptions import NoReverseMatch
-
 # Imports related to Auth
 from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
 
-# Imports related to Models, Forms, Parser
+# Imports related to Models
 from .models import NewsFeed, Profile
 from .models import Bookmarks
 from .models import UserDeleted, UserRead
+
+# Forms & Parser import
 from .forms import LoginForm, FillUpForm
 from .parser import ParserClass
 
@@ -25,6 +22,7 @@ from .parser import ParserClass
 from datetime import datetime
 
 
+# 1. Sign Up - Register a User
 def sign_up(request):
     context = {}
     form = UserCreationForm(request.POST or None)
@@ -43,6 +41,7 @@ def sign_up(request):
     return render(request, 'registration/signup.html', context)
 
 
+# 2. Fill Details Right after sign up.
 @login_required
 def filldetails(request):
     form = FillUpForm(request.POST or None)
@@ -56,6 +55,7 @@ def filldetails(request):
     return render(request, 'registration/details_page.html', context)
 
 
+# 3. Login a user
 def login_user(request):
     context = dict()
     form = LoginForm()
@@ -79,19 +79,21 @@ def login_user(request):
         return render(request, "registration/login.html", invalid)
 
 
+# 4. Logout a user
 @login_required
 def logout(request):
     logout(request)
     return render(request, "registration/logout.html")
 
 
+# 5. Password Change Not a priority
 @login_required
 def password_change(request):
     #TODO: Password Change/Password Forget
     pass
 
 
-# Index Page populating logic
+# 6. Index Page populating logic
 # written on 30-08-2020
 @login_required
 def index(request):
@@ -141,6 +143,7 @@ def index(request):
     return render(request, 'mainapp/index.html', context)
 
 
+# 7. User's Profile View.
 @login_required
 def profile(request, user):
     context = {}
@@ -153,6 +156,7 @@ def profile(request, user):
     return render(request, "mainapp/profile.html", context)
 
 
+# 8. Read History View.
 @login_required
 def marked_read(request):
     read_history = dict()
@@ -168,6 +172,7 @@ def marked_read(request):
     return render(request, "mainapp/history.html", read_history)
 
 
+# 9. Mark a URL as Read
 @login_required
 def marked_read_detail(request, hid):
     user = User.objects.get(username=request.user)
@@ -180,14 +185,15 @@ def marked_read_detail(request, hid):
         
         try:
             user_read = UserRead.objects.get(hid=nfd, userid=prof)
-            return redirect('/index/')
         
         except ObjectDoesNotExist:
             user_read = UserRead(userid=prof, hid=nfd)
             user_read.save()
-            return HttpResponseRedirect('/index/')
+    
+    return HttpResponse(status=204)
 
 
+# 10. Bookmark a URL
 @login_required
 def bookmark(request):
     bookmark = dict()
@@ -203,39 +209,35 @@ def bookmark(request):
     return render(request, "mainapp/bookmarks.html", bookmark)
 
 
+# 11. Bookmark Details.
 @login_required
 def bookmark_details(request, hid):
     user = User.objects.get(username=request.user)
     nfd = NewsFeed.objects.get(hid=hid)
     prof = Profile.objects.get(user=user)
-    print("Printing HID", hid)
+
     if request.user.is_active and request.method == 'POST':
         try:
             user_read = Bookmarks.objects.get(hack_id=nfd, user=prof)
-            #TODO: Find a way to figure out bookmarking without
-            # redirecting/re-loading the web page
-            return redirect(reverse('/index/'))
-        
-        except NoReverseMatch:
-            return redirect('/index/')
             
         except ObjectDoesNotExist:
             user_read = Bookmarks(user=prof, hack_id=nfd)
             user_read.save()
-            return HttpResponseRedirect('/index/')
+            
+        return HttpResponse(status=204)
     
     elif request.user.is_active and request.method == 'GET':
-        print(request.method)
+
         try:
             user_read = Bookmarks.objects.get(hack_id=nfd, user=prof)
             user_read.delete()
-            return redirect('/bookmark/')
+            return HttpResponse(status=204)
         
         except ObjectDoesNotExist:
             return redirect('/bookmark/')
 
 
-# Delete Item Logical Function Written.
+# 12. Delete Item Logical Function Written.
 @login_required
 def deleteitem(request, hid):
     if request.user.is_active and request.method == 'POST':
@@ -246,6 +248,7 @@ def deleteitem(request, hid):
         try:
             userdel = UserDeleted.objects.get(hid=hid,
                                               userid=prof_user)
+            return HttpResponse(status=204)
         
         except ObjectDoesNotExist:
             userdel = UserDeleted(userid=prof_user,
