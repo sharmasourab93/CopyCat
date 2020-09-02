@@ -16,7 +16,7 @@ urlpatterns = [
     # 3. Logout
     path('accounts/logout', logout, name="logout"),
     # 4. Password Change
-    #TODO: Password Change/Reset
+    path('accounts/password-change', password_change, name="password_change"),
     
     # 12. Fill User Details
     path('filldetails/', filldetails, name='filldetails'),

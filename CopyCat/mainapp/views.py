@@ -4,9 +4,10 @@ from django.db.utils import IntegrityError
 from django.core.exceptions import ObjectDoesNotExist
 
 # Imports related to Auth
+from django.contrib import messages
 from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login, logout
+from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.decorators import login_required
 
 # Imports related to Models
@@ -16,6 +17,8 @@ from .models import UserDeleted, UserRead
 
 # Forms & Parser import
 from .forms import LoginForm, FillUpForm
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import PasswordChangeForm
 from .parser import ParserClass
 
 # datetime features
@@ -87,10 +90,22 @@ def logout(request):
 
 
 # 5. Password Change Not a priority
-@login_required
 def password_change(request):
-    #TODO: Password Change/Password Forget
-    pass
+    
+    if request.method == 'POST' and request.user.is_active:
+        form = PasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request, user)
+            messages.success(request, "Your Password was successfully updated!")
+            return redirect('/accounts/login/')
+        else:
+            messages.error(request, 'Please correct the error below.')
+    else:
+        form = PasswordChangeForm(request.user)
+        
+    return render(request, 'registration/password.html', {'form': form})
+    
 
 
 # 6. Index Page populating logic

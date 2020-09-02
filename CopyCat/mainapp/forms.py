@@ -18,10 +18,6 @@ class LoginForm(forms.Form):
         return user
     
 
-class PasswordChange(forms.Form):
-    pass
-
-
 class FillUpForm(forms.ModelForm):
     
     class Meta:
