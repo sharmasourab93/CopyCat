@@ -23,23 +23,22 @@ Objective
 
 By 27/08/2020 Complete Login & Session, Profile, URL, Bookmarks
 
-Items Completed by Date
+Items Completed by Date in the 3 hours time block
 
-24/08/2020 - Skeleton, Architecture
-25/08/2020 - Update On Login, Logout, Sign Up, Bookmark Skeleton
-26/08/2020 - DB & Migrations
-27/08/2020 - UI Base template for Mainapp & Registration
-28/08/2020 - Parser & DB Insertion logic
-30/08/2020 - Index Page Population Logic & Parser Table Updation
-31/08/2020 - Action Buttons On Index page, Reverse Chronological Order
-01/09/2020 - Bookmarks & Delete Items
+1. 24/08/2020 - Skeleton, Architecture
+2. 25/08/2020 - Update On Login, Logout, Sign Up, Bookmark Skeleton
+3. 26/08/2020 - DB & Migrations
+4. 27/08/2020 - UI Base template for Mainapp & Registration
+5. 28/08/2020 - Parser & DB Insertion logic
+6. 30/08/2020 - Index Page Population Logic & Parser Table Updation
+7. 31/08/2020 - Action Buttons On Index page, Reverse Chronological Order
+8. 01/09/2020 - Bookmarks & Delete Items
+9. 02/09/2020 - Mark as Read, Segregating Read Items, Password Change
 
 Items Planned to complete
-02/09/2020 - Mark as Read and Segregating Read Items
-03/09/2020 - Limit Views to 30 On a page
-04/09/2020 - Remaining TODO List
-05/09/2020 - Remaining TODO List & Template classes
-06/09/2020 - Write Test cases
+03/09/2020 - Limit Views to 30 On a page, Write Test cases
+04/09/2020 - Write Test cases
+05/09/2020 -
 
 
 Db
