@@ -1,0 +1,44 @@
+{% extends 'mainapp/base.html' %}
+{% block content %}
+
+    <div class="container-fluid songs-container">
+    {% if data %}
+    <center>
+        <ol class="nav nav-pills" style="margin-bottom: 10px;">
+            <table>
+                {% for d in data %}
+                    <li role="presentation" class="active">
+                        <div class="container-fluid">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span>{{ forloop.counter }}</span>
+                                        <span>&nbsp;</span>
+                                        <span>&nbsp;</span>
+                                        <span>&nbsp;</span>
+                                        <a href="{{d.url}}">{{ d.title }}</a>
+                                    </td>
+                                </tr>
+                                <tr style="font-size:12px;">
+                                    <span>&nbsp;&nbsp;&nbsp;</span>
+                                    <td>
+                                        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                        <a href="https://news.ycombinator.com/item?id={{d.hid}}">{{d.comments}} comments </a> by <a href="#">{{d.author}}</a>
+                                        posted {{d.posted_on}} | Upvotes {{d.upvotes}}
+                                    </td>
+                                </tr>
+                                <tr style="height:10px;"></tr>
+                            </tbody>
+                        </div>
+                    </li>
+                {% endfor %}
+            </table>
+        </ol>
+        <center>
+    {% else %}
+        No Read History.
+    {% endif %}
+</div>
+
+{% endblock content %}

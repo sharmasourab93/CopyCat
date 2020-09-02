@@ -29,7 +29,8 @@
                                     </td>
 
                                         <td>
-                                            <form action="read/item?id={{d.hid}}/" method="POST" class="icon-color-green">
+                                            <form action="marked-read/{{d.hid}}/" method="POST" class="icon-color-green">
+                                                {% csrf_token %}
                                                 <button type="submit" value="Read" title="Read" aria-label="Read">
                                                     <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                                                 </button>
@@ -46,7 +47,6 @@
                                         </td>
 
                                         <td>
-                                            <!--Action Block for delete item completed in Template-->
                                             <form action="deleteitem/{{d.hid}}/" method="POST" class="icon-color-red">
                                                 {% csrf_token %}
                                                 <button type="submit" title="Delete">
