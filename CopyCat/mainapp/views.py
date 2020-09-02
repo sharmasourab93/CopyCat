@@ -153,7 +153,40 @@ def profile(request, user):
     return render(request, "mainapp/profile.html", context)
 
 
-#TODO: Marked a Read View
+@login_required
+def marked_read(request):
+    read_history = dict()
+    user = User.objects.get(username=request.user)
+    prof = Profile.objects.get(user=user)
+    marks = UserRead.objects.filter(userid=prof) \
+        .values_list('hid_id')
+    
+    obj = NewsFeed.objects.filter(id__in=marks).order_by('posted_on')
+    
+    read_history['data'] = obj
+    
+    return render(request, "mainapp/history.html", read_history)
+
+
+@login_required
+def marked_read_detail(request, hid):
+    user = User.objects.get(username=request.user)
+    prof = Profile.objects.get(user=user)
+    nfd = NewsFeed.objects.get(hid=hid)
+    
+    if request.user.is_active and \
+            request.method == 'POST' and \
+            hid is not None:
+        
+        try:
+            user_read = UserRead.objects.get(hid=nfd, userid=prof)
+            return redirect('/index/')
+        
+        except ObjectDoesNotExist:
+            user_read = UserRead(userid=prof, hid=nfd)
+            user_read.save()
+            return HttpResponseRedirect('/index/')
+
 
 @login_required
 def bookmark(request):

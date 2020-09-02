@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.urls import path, re_path
 from .views import index, sign_up, logout, login_user, password_change
 from .views import profile, bookmark, filldetails
+from .views import marked_read, marked_read_detail
 from .views import deleteitem, bookmark_details
 
 app_name = 'mainapp'
@@ -24,12 +25,11 @@ urlpatterns = [
     path('index/', index, name='index'),
     
     # 6. User's Profile View
-    #TODO: Profile View In Template & views.py
     path(r'profile/<user>', profile, name='profile'),
     
     # 7. Marked As Read
-    #TODO: URLS Marked As Read
-    # re_path(r'^index/read/(?P<hid>[0-9]+)/$', marked_read, name="marked_read")
+    path('marked-read/', marked_read, name="marked_read"),
+    re_path(r'^index/marked-read/(?P<hid>[0-9]+)/$', marked_read_detail, name="read"),
     
     # 8. Bookmarks or View All Bookmarks
     path('bookmark/', bookmark, name='bookmark'),
