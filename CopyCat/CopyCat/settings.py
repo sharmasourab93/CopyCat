@@ -14,6 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+print(BASE_DIR)
 
 
 # Quick-start development settings - unsuitable for production
@@ -86,6 +87,47 @@ DATABASES = {
 }
 
 
+# LOGGING Dict
+LOGGING = {
+        'version': 1,
+        'disable_existing_loggers': False,
+        'formatters': {
+            'verbose': {
+                    'format': '({asctime}) - {levelname}'
+                              ' {name}: {lineno} {module} '
+                              '{process:d} {thread:d} {message}',
+                    'style': '{',
+                },
+            'simple': {
+                    'format': '{levelname} {message}',
+                    'style': '{',
+                },
+            },
+        'handlers': {
+            'file': {
+                'level': 'DEBUG',
+                'class': 'logging.handlers.RotatingFileHandler',
+                'filename': os.path.join(BASE_DIR, 'logs/debugger.log'),
+                'formatter': 'verbose',
+                },
+            'console': {
+                'level': 'INFO',
+                'class': 'logging.StreamHandler',
+                'formatter': 'simple',
+                },
+            },
+        'loggers': {
+            'django': {
+                'handlers': ['file'],
+                'level': os.getenv('DJANGO_LOG_LEVEL', 'INFO'),
+                'propagate': True,
+                },
+            },
+        'root': {
+            'handlers': ['console'],
+            'level': 'INFO'
+            }
+    }
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 

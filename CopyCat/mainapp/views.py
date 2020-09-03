@@ -20,21 +20,27 @@ from .forms import LoginForm, FillUpForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.forms import PasswordChangeForm
 from .parser import ParserClass
+import logging
 
 # datetime features
 from datetime import datetime
 
 
+logger = logging.getLogger(__name__)
+
+
 # 1. Sign Up - Register a User
 def sign_up(request):
+    # logger.info('SignUp for {0}'.format(request.user))
     context = {}
     form = UserCreationForm(request.POST or None)
     
     if request.user.is_active and request.user.is_authenticated:
-        
+        # logger.warning('Access Forbidden for {0}'.format(request.user))
         return HttpResponseForbidden()
     
     if request.method == "POST":
+        # logger.debug('POST received. Redirecting to Filling')
         if form.is_valid():
             user = form.save()
             login(request, user)
@@ -90,6 +96,7 @@ def logout(request):
 
 
 # 5. Password Change Not a priority
+@login_required
 def password_change(request):
     
     if request.method == 'POST' and request.user.is_active:
@@ -106,7 +113,6 @@ def password_change(request):
         
     return render(request, 'registration/password.html', {'form': form})
     
-
 
 # 6. Index Page populating logic
 # written on 30-08-2020

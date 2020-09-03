@@ -1,0 +1,109 @@
+Watching for file changes with StatReloader
+"GET /accounts/login HTTP/1.1" 200 1826
+"GET /accounts/signup HTTP/1.1" 200 2487
+"GET /accounts/login HTTP/1.1" 200 1826
+"POST /accounts/login HTTP/1.1" 200 2914
+"GET /profile/aarav HTTP/1.1" 200 4104
+"GET /accounts/password-change HTTP/1.1" 200 2271
+G:\Code\Projects\CopyCat\CopyCat\CopyCat\settings.py changed, reloading.
+Watching for file changes with StatReloader
+G:\Code\Projects\CopyCat\CopyCat\CopyCat\settings.py changed, reloading.
+Watching for file changes with StatReloader
+G:\Code\Projects\CopyCat\CopyCat\CopyCat\settings.py changed, reloading.
+Watching for file changes with StatReloader
+G:\Code\Projects\CopyCat\CopyCat\CopyCat\settings.py changed, reloading.
+Watching for file changes with StatReloader
+G:\Code\Projects\CopyCat\CopyCat\CopyCat\settings.py changed, reloading.
+Watching for file changes with StatReloader
+G:\Code\Projects\CopyCat\CopyCat\CopyCat\settings.py changed, reloading.
+INFO  2020-09-03 16:07:11,823 autoreload 29468 7236 Watching for file changes with StatReloader
+INFO  2020-09-03 16:08:21,882 basehttp 29468 10228 "GET /index/ HTTP/1.1" 200 977935
+INFO  2020-09-03 16:10:07,728 basehttp 29468 10228 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO  2020-09-03 16:10:07,757 basehttp 29468 10228 "GET /accounts/login/ HTTP/1.1" 200 1898
+INFO  2020-09-03 16:10:09,629 basehttp 29468 10228 "GET /accounts/signup HTTP/1.1" 200 2487
+INFO  2020-09-03 16:11:00,978 autoreload 29468 7236 G:\Code\Projects\CopyCat\CopyCat\CopyCat\settings.py changed, reloading.
+[INFO] 2020-09-03 16:11:02,135 autoreload 22728 29556 Watching for file changes with StatReloader
+[INFO] 2020-09-03 16:11:04,761 basehttp 22728 8592 "GET /accounts/login HTTP/1.1" 200 1826
+[INFO] 2020-09-03 16:11:07,441 basehttp 22728 8592 "GET /accounts/signup HTTP/1.1" 200 2487
+[INFO] 2020-09-03 16:12:09,852 autoreload 22728 29556 G:\Code\Projects\CopyCat\CopyCat\CopyCat\settings.py changed, reloading.
+[INFO] 2020-09-03 16:13:23,054 autoreload 24808 29364 Watching for file changes with StatReloader
+[INFO] 2020-09-03 16:13:30,523 basehttp 24808 10864 "GET /accounts/login HTTP/1.1" 200 1826
+[INFO] 2020-09-03 16:13:36,462 basehttp 24808 10864 "GET /accounts/signup HTTP/1.1" 200 2487
+[INFO] 2020-09-03 16:14:14,434 autoreload 24808 29364 G:\Code\Projects\CopyCat\CopyCat\CopyCat\settings.py changed, reloading.
+[INFO] 2020-09-03 16:17:41,605 autoreload 16364 20868 Watching for file changes with StatReloader
+[INFO] 2020-09-03 16:19:57,928 autoreload 16364 20868 G:\Code\Projects\CopyCat\CopyCat\CopyCat\settings.py changed, reloading.
+[INFO] 2020-09-03 16:19:59,013 autoreload 18256 8516 Watching for file changes with StatReloader
+[INFO] 2020-09-03 16:20:14,296 autoreload 18256 8516 G:\Code\Projects\CopyCat\CopyCat\CopyCat\settings.py changed, reloading.
+[INFO] 2020-09-03 16:20:15,357 autoreload 26312 27744 Watching for file changes with StatReloader
+[INFO] 2020-09-03 16:20:26,241 basehttp 26312 3992 "GET /accounts/login HTTP/1.1" 200 1826
+[INFO] 2020-09-03 16:20:34,279 basehttp 26312 3992 "GET /accounts/signup HTTP/1.1" 200 2487
+[INFO] 2020-09-03 16:23:30,296 autoreload 26312 27744 G:\Code\Projects\CopyCat\CopyCat\CopyCat\settings.py changed, reloading.
+[INFO] 2020-09-03 16:23:31,390 autoreload 10048 17144 Watching for file changes with StatReloader
+[INFO] 2020-09-03 16:28:55,312 autoreload 10048 17144 G:\Code\Projects\CopyCat\CopyCat\CopyCat\settings.py changed, reloading.
+{asctime}-[INFO]  autoreload 29344 17648 Watching for file changes with StatReloader
+{asctime}-[INFO]  autoreload 29344 17648 G:\Code\Projects\CopyCat\CopyCat\CopyCat\settings.py changed, reloading.
+{asctime}-[INFO]  django.utils.autoreload: 598 autoreload 21768 21464 Watching for file changes with StatReloader
+{asctime}-[INFO]  django.utils.autoreload: 222 autoreload 21768 21464 G:\Code\Projects\CopyCat\CopyCat\CopyCat\settings.py changed, reloading.
+2020-09-03 16:29:34,487-[INFO]  django.utils.autoreload: 598 autoreload 8996 27784 Watching for file changes with StatReloader
+2020-09-03 16:29:42,307-[INFO]  django.utils.autoreload: 222 autoreload 8996 27784 G:\Code\Projects\CopyCat\CopyCat\CopyCat\settings.py changed, reloading.
+2020-09-03 16:29:43,486 - [INFO]  django.utils.autoreload: 598 autoreload 24592 19020 Watching for file changes with StatReloader
+2020-09-03 16:29:54,970 - [INFO]  django.utils.autoreload: 222 autoreload 24592 19020 G:\Code\Projects\CopyCat\CopyCat\CopyCat\settings.py changed, reloading.
+(2020-09-03 16:29:56,035) - [INFO]  django.utils.autoreload: 598 autoreload 13836 1772 Watching for file changes with StatReloader
+(2020-09-03 16:30:21,338) - [INFO]  django.server: 157 basehttp 13836 21160 "GET /accounts/login HTTP/1.1" 200 1826
+(2020-09-03 16:30:25,993) - [INFO]  django.server: 157 basehttp 13836 21160 "GET /accounts/signup HTTP/1.1" 200 2487
+(2020-09-03 16:30:54,870) - [INFO]  django.utils.autoreload: 222 autoreload 13836 1772 G:\Code\Projects\CopyCat\CopyCat\CopyCat\settings.py changed, reloading.
+(2020-09-03 16:30:55,973) - [INFO]  django.utils.autoreload: 598 autoreload 14156 11800 Watching for file changes with StatReloader
+(2020-09-03 16:31:09,902) - [INFO]  django.utils.autoreload: 222 autoreload 14156 11800 G:\Code\Projects\CopyCat\CopyCat\CopyCat\settings.py changed, reloading.
+(2020-09-03 16:31:16,397) - [INFO]  django.utils.autoreload: 598 autoreload 27392 27484 Watching for file changes with StatReloader
+(2020-09-03 16:31:31,308) - [INFO]  django.server: 157 basehttp 27392 2572 "GET /accounts/login HTTP/1.1" 200 1826
+(2020-09-03 16:31:34,697) - [INFO]  django.server: 157 basehttp 27392 2572 "GET /accounts/signup HTTP/1.1" 200 2487
+(2020-09-03 16:31:54,933) - [INFO]  django.utils.autoreload: 222 autoreload 27392 27484 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 16:31:56,358) - [INFO]  django.utils.autoreload: 598 autoreload 2644 16008 Watching for file changes with StatReloader
+(2020-09-03 16:32:01,942) - [INFO]  django.server: 157 basehttp 2644 19164 "GET /accounts/login HTTP/1.1" 200 1826
+(2020-09-03 16:32:06,948) - [INFO]  django.server: 157 basehttp 2644 19164 "GET /accounts/signup HTTP/1.1" 200 2487
+(2020-09-03 16:36:16,698) - [INFO]  django.utils.autoreload: 222 autoreload 2644 16008 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 16:36:17,776) - [INFO]  django.utils.autoreload: 598 autoreload 28336 16364 Watching for file changes with StatReloader
+(2020-09-03 16:36:21,839) - [INFO]  django.server: 157 basehttp 28336 2388 "GET /accounts/login HTTP/1.1" 200 1826
+(2020-09-03 16:36:25,550) - [ERROR]  django.request: 228 log 28336 2388 Internal Server Error: /accounts/signup
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 34, in sign_up
+    logger.DEBUG('SignUp for {0}'.format(request.user))
+AttributeError: 'Logger' object has no attribute 'DEBUG'
+(2020-09-03 16:36:25,553) - [ERROR]  django.server: 157 basehttp 28336 2388 "GET /accounts/signup HTTP/1.1" 500 72607
+(2020-09-03 16:36:26,352) - [WARNING]  django.request: 228 log 28336 2388 Not Found: /favicon.ico
+(2020-09-03 16:36:26,353) - [WARNING]  django.server: 157 basehttp 28336 2388 "GET /favicon.ico HTTP/1.1" 404 4501
+(2020-09-03 16:36:34,163) - [INFO]  django.utils.autoreload: 222 autoreload 28336 16364 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 16:36:35,585) - [INFO]  django.utils.autoreload: 598 autoreload 2264 19944 Watching for file changes with StatReloader
+(2020-09-03 16:36:38,700) - [INFO]  django.server: 157 basehttp 2264 10884 "GET /accounts/signup HTTP/1.1" 200 2487
+(2020-09-03 16:36:42,591) - [INFO]  django.server: 157 basehttp 2264 10884 "GET /accounts/login HTTP/1.1" 200 1826
+(2020-09-03 16:36:43,991) - [INFO]  django.server: 157 basehttp 2264 10884 "GET /accounts/signup HTTP/1.1" 200 2487
+(2020-09-03 16:37:14,840) - [INFO]  django.server: 157 basehttp 2264 10884 "GET /accounts/login HTTP/1.1" 200 1826
+(2020-09-03 16:37:20,382) - [INFO]  django.server: 157 basehttp 2264 10884 "GET /accounts/signup HTTP/1.1" 200 2487
+(2020-09-03 16:37:46,425) - [INFO]  django.utils.autoreload: 222 autoreload 2264 19944 G:\Code\Projects\CopyCat\CopyCat\CopyCat\settings.py changed, reloading.
+(2020-09-03 16:37:47,540) - [INFO]  django.utils.autoreload: 598 autoreload 30460 29648 Watching for file changes with StatReloader
+(2020-09-03 16:37:50,494) - [INFO]  django.server: 157 basehttp 30460 9308 "GET /accounts/login HTTP/1.1" 200 1826
+(2020-09-03 16:37:56,165) - [INFO]  django.server: 157 basehttp 30460 9308 "GET /accounts/signup HTTP/1.1" 200 2487
+(2020-09-03 16:38:13,282) - [INFO]  django.utils.autoreload: 222 autoreload 30460 29648 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 16:38:14,490) - [INFO]  django.utils.autoreload: 598 autoreload 23396 27100 Watching for file changes with StatReloader
+(2020-09-03 16:38:16,128) - [INFO]  django.server: 157 basehttp 23396 17888 "GET /accounts/login HTTP/1.1" 200 1826
+(2020-09-03 16:38:17,801) - [INFO]  django.server: 157 basehttp 23396 17888 "GET /accounts/signup HTTP/1.1" 200 2487
+(2020-09-03 16:40:23,101) - [INFO]  django.server: 157 basehttp 23396 17888 "GET /accounts/login HTTP/1.1" 200 1826
+(2020-09-03 16:53:47,669) - [INFO]  django.utils.autoreload: 222 autoreload 23396 27100 G:\Code\Projects\CopyCat\CopyCat\CopyCat\settings.py changed, reloading.
+(2020-09-03 16:53:48,830) - INFO django.utils.autoreload: 598 autoreload 23724 30376 Watching for file changes with StatReloader
+(2020-09-03 16:53:56,095) - INFO django.server: 157 basehttp 23724 5792 "GET /accounts/login HTTP/1.1" 200 1826
+(2020-09-03 16:54:30,665) - INFO django.utils.autoreload: 222 autoreload 23724 30376 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 16:54:32,060) - INFO django.utils.autoreload: 598 autoreload 26408 23064 Watching for file changes with StatReloader
+(2020-09-03 16:54:38,737) - INFO django.utils.autoreload: 222 autoreload 26408 23064 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 16:54:39,830) - INFO django.utils.autoreload: 598 autoreload 25636 30180 Watching for file changes with StatReloader
+(2020-09-03 16:55:06,099) - INFO django.utils.autoreload: 222 autoreload 25636 30180 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 16:55:07,178) - INFO django.utils.autoreload: 598 autoreload 28176 10832 Watching for file changes with StatReloader
+(2020-09-03 16:55:10,192) - INFO django.utils.autoreload: 222 autoreload 28176 10832 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 16:55:11,370) - INFO django.utils.autoreload: 598 autoreload 27868 14948 Watching for file changes with StatReloader
+(2020-09-03 16:55:13,331) - INFO django.utils.autoreload: 222 autoreload 27868 14948 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 16:55:14,602) - INFO django.utils.autoreload: 598 autoreload 18140 15084 Watching for file changes with StatReloader
