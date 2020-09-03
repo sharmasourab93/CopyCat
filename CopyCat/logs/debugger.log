@@ -107,3 +107,1979 @@ AttributeError: 'Logger' object has no attribute 'DEBUG'
 (2020-09-03 16:55:11,370) - INFO django.utils.autoreload: 598 autoreload 27868 14948 Watching for file changes with StatReloader
 (2020-09-03 16:55:13,331) - INFO django.utils.autoreload: 222 autoreload 27868 14948 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
 (2020-09-03 16:55:14,602) - INFO django.utils.autoreload: 598 autoreload 18140 15084 Watching for file changes with StatReloader
+(2020-09-03 16:58:04,911) - INFO django.server: 157 basehttp 18140 14044 "POST /accounts/login HTTP/1.1" 200 2914
+(2020-09-03 16:58:24,532) - INFO django.server: 157 basehttp 18140 14044 "GET /index/ HTTP/1.1" 200 981536
+(2020-09-03 16:58:29,004) - INFO django.server: 157 basehttp 18140 14044 "GET /accounts/logout/ HTTP/1.1" 302 0
+(2020-09-03 16:58:29,043) - INFO django.server: 157 basehttp 18140 14044 "GET /accounts/login/ HTTP/1.1" 200 1898
+(2020-09-03 16:58:39,126) - INFO django.server: 157 basehttp 18140 14044 "POST /accounts/login/ HTTP/1.1" 302 0
+(2020-09-03 16:58:45,097) - INFO django.server: 157 basehttp 18140 14044 "GET /index/ HTTP/1.1" 200 981536
+(2020-09-03 16:59:54,451) - INFO django.server: 157 basehttp 18140 14044 "POST /index/marked-read/24362448/ HTTP/1.1" 204 0
+(2020-09-03 16:59:58,377) - INFO django.server: 157 basehttp 18140 14044 "POST /index/bookmark/24352724/ HTTP/1.1" 204 0
+(2020-09-03 17:00:00,152) - INFO django.server: 157 basehttp 18140 14044 "POST /index/bookmark/24362021/ HTTP/1.1" 204 0
+(2020-09-03 17:00:01,728) - INFO django.server: 157 basehttp 18140 14044 "POST /index/deleteitem/24362095/ HTTP/1.1" 302 0
+(2020-09-03 17:00:08,051) - INFO django.server: 157 basehttp 18140 14044 "GET /index/ HTTP/1.1" 200 977918
+(2020-09-03 17:00:15,958) - INFO django.server: 157 basehttp 18140 14044 "GET /bookmark/ HTTP/1.1" 200 31545
+(2020-09-03 17:00:26,691) - INFO django.server: 157 basehttp 18140 14044 "GET /bookmark/remove/24352724? HTTP/1.1" 204 0
+(2020-09-03 17:00:29,374) - INFO django.server: 157 basehttp 18140 14044 "GET /bookmark/remove/24362021? HTTP/1.1" 204 0
+(2020-09-03 17:00:31,016) - INFO django.server: 157 basehttp 18140 14044 "GET /bookmark/remove/24354265? HTTP/1.1" 204 0
+(2020-09-03 17:00:33,000) - INFO django.server: 157 basehttp 18140 14044 "GET /bookmark/ HTTP/1.1" 200 23832
+(2020-09-03 17:00:33,246) - INFO django.server: 157 basehttp 18140 14044 "GET /static/images/favicon.png HTTP/1.1" 200 1412
+(2020-09-03 17:01:39,384) - INFO django.utils.autoreload: 222 autoreload 18140 15084 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 17:01:40,453) - INFO django.utils.autoreload: 598 autoreload 18048 27704 Watching for file changes with StatReloader
+(2020-09-03 17:01:43,403) - ERROR django.request: 228 log 18048 16048 Internal Server Error: /bookmark/remove/24353927
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 251, in bookmark_details
+    print(request.user.objects)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\utils\functional.py", line 225, in inner
+    return func(self._wrapped, *args)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\db\models\manager.py", line 176, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % cls.__name__)
+AttributeError: Manager isn't accessible via User instances
+(2020-09-03 17:01:43,418) - ERROR django.server: 157 basehttp 18048 16048 "GET /bookmark/remove/24353927? HTTP/1.1" 500 86757
+(2020-09-03 17:01:55,899) - INFO django.utils.autoreload: 222 autoreload 18048 27704 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 17:01:57,073) - INFO django.utils.autoreload: 598 autoreload 27392 27736 Watching for file changes with StatReloader
+(2020-09-03 17:02:02,400) - INFO django.server: 157 basehttp 27392 29212 "GET /bookmark/remove/24353927? HTTP/1.1" 204 0
+(2020-09-03 17:02:35,929) - INFO django.utils.autoreload: 222 autoreload 27392 27736 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 17:02:36,966) - INFO django.utils.autoreload: 598 autoreload 29704 6612 Watching for file changes with StatReloader
+(2020-09-03 17:02:51,204) - INFO django.utils.autoreload: 222 autoreload 29704 6612 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 17:02:52,349) - INFO django.utils.autoreload: 598 autoreload 5996 29368 Watching for file changes with StatReloader
+(2020-09-03 17:02:55,196) - INFO django.server: 157 basehttp 5996 21152 "GET /bookmark/remove/24353927? HTTP/1.1" 302 0
+(2020-09-03 17:02:55,414) - INFO django.server: 157 basehttp 5996 21152 "GET /bookmark/ HTTP/1.1" 200 21307
+(2020-09-03 17:03:24,211) - INFO django.utils.autoreload: 222 autoreload 5996 29368 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 17:03:25,278) - INFO django.utils.autoreload: 598 autoreload 29428 23996 Watching for file changes with StatReloader
+(2020-09-03 17:03:43,436) - INFO django.utils.autoreload: 222 autoreload 29428 23996 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 17:03:44,681) - INFO django.utils.autoreload: 598 autoreload 6972 15104 Watching for file changes with StatReloader
+(2020-09-03 17:05:02,882) - INFO django.server: 157 basehttp 6972 30484 "GET /bookmark/remove/24353137? HTTP/1.1" 204 0
+(2020-09-03 17:05:17,728) - INFO django.utils.autoreload: 222 autoreload 6972 15104 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 17:05:18,891) - INFO django.utils.autoreload: 598 autoreload 6356 10432 Watching for file changes with StatReloader
+(2020-09-03 17:05:20,495) - INFO django.server: 157 basehttp 6356 28984 "GET /bookmark/remove/24353508? HTTP/1.1" 204 0
+(2020-09-03 17:05:54,450) - INFO django.utils.autoreload: 222 autoreload 6356 10432 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 17:05:55,579) - INFO django.utils.autoreload: 598 autoreload 28012 11588 Watching for file changes with StatReloader
+(2020-09-03 17:05:58,185) - INFO django.server: 157 basehttp 28012 19140 "GET /bookmark/remove/24352440? HTTP/1.1" 204 0
+(2020-09-03 17:06:53,848) - INFO django.utils.autoreload: 222 autoreload 28012 11588 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 17:06:54,937) - INFO django.utils.autoreload: 598 autoreload 26384 24800 Watching for file changes with StatReloader
+(2020-09-03 17:06:56,877) - ERROR django.request: 228 log 26384 1280 Internal Server Error: /bookmark/remove/24353545
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 251, in bookmark_details
+    print(type(request), dir(request), dict(request.content_params.values))
+TypeError: 'builtin_function_or_method' object is not iterable
+(2020-09-03 17:06:56,883) - ERROR django.server: 157 basehttp 26384 1280 "GET /bookmark/remove/24353545? HTTP/1.1" 500 79142
+(2020-09-03 17:07:04,679) - INFO django.utils.autoreload: 222 autoreload 26384 24800 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 17:07:05,913) - INFO django.utils.autoreload: 598 autoreload 29252 28856 Watching for file changes with StatReloader
+(2020-09-03 17:07:06,648) - INFO django.server: 157 basehttp 29252 26724 "GET /bookmark/ HTTP/1.1" 200 13439
+(2020-09-03 17:07:10,720) - ERROR django.request: 228 log 29252 26724 Internal Server Error: /bookmark/remove/24352734
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 251, in bookmark_details
+    print(type(request), dir(request), list(request.content_params.values))
+TypeError: 'builtin_function_or_method' object is not iterable
+(2020-09-03 17:07:10,722) - ERROR django.server: 157 basehttp 29252 26724 "GET /bookmark/remove/24352734? HTTP/1.1" 500 79092
+(2020-09-03 17:07:50,551) - INFO django.utils.autoreload: 222 autoreload 29252 28856 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 17:07:51,615) - INFO django.utils.autoreload: 598 autoreload 23996 10808 Watching for file changes with StatReloader
+(2020-09-03 17:08:26,365) - INFO django.utils.autoreload: 598 autoreload 27864 12012 Watching for file changes with StatReloader
+(2020-09-03 17:08:29,676) - INFO django.server: 157 basehttp 27864 12228 "GET /bookmark/ HTTP/1.1" 200 13439
+(2020-09-03 17:08:29,946) - INFO django.server: 157 basehttp 27864 12228 "GET /static/images/favicon.png HTTP/1.1" 200 1412
+(2020-09-03 17:08:33,387) - INFO django.server: 157 basehttp 27864 12228 "GET /bookmark/remove/24353545? HTTP/1.1" 204 0
+(2020-09-03 17:08:48,532) - INFO django.utils.autoreload: 222 autoreload 27864 12012 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 17:08:49,726) - INFO django.utils.autoreload: 598 autoreload 10720 22700 Watching for file changes with StatReloader
+(2020-09-03 17:08:50,520) - INFO django.server: 157 basehttp 10720 30052 "GET /bookmark/ HTTP/1.1" 200 10816
+(2020-09-03 17:08:50,635) - INFO django.server: 157 basehttp 10720 30052 "GET /static/images/favicon.png HTTP/1.1" 200 1412
+(2020-09-03 17:08:52,676) - INFO django.server: 157 basehttp 10720 30052 "GET /bookmark/remove/24353623? HTTP/1.1" 204 0
+(2020-09-03 17:09:29,963) - INFO django.utils.autoreload: 222 autoreload 10720 22700 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 17:09:31,137) - INFO django.utils.autoreload: 598 autoreload 27736 300 Watching for file changes with StatReloader
+(2020-09-03 17:09:31,857) - INFO django.server: 157 basehttp 27736 12272 "GET /bookmark/ HTTP/1.1" 200 8243
+(2020-09-03 17:09:31,981) - INFO django.server: 157 basehttp 27736 12272 "GET /static/images/favicon.png HTTP/1.1" 200 1412
+(2020-09-03 17:09:33,872) - INFO django.server: 157 basehttp 27736 12272 "GET /bookmark/remove/24353490? HTTP/1.1" 204 0
+(2020-09-03 17:09:47,443) - INFO django.utils.autoreload: 222 autoreload 27736 300 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 17:09:48,549) - INFO django.utils.autoreload: 598 autoreload 9620 16740 Watching for file changes with StatReloader
+(2020-09-03 17:09:50,332) - INFO django.server: 157 basehttp 9620 28572 "GET /bookmark/remove/24352734? HTTP/1.1" 204 0
+(2020-09-03 17:10:35,785) - INFO django.utils.autoreload: 222 autoreload 9620 16740 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 17:10:36,987) - INFO django.utils.autoreload: 598 autoreload 30304 28564 Watching for file changes with StatReloader
+(2020-09-03 17:10:37,685) - INFO django.server: 157 basehttp 30304 15584 "GET /bookmark/ HTTP/1.1" 200 2918
+(2020-09-03 17:10:37,782) - INFO django.server: 157 basehttp 30304 15584 "GET /static/images/favicon.png HTTP/1.1" 200 1412
+(2020-09-03 17:10:39,656) - INFO django.server: 157 basehttp 30304 15584 "GET /profile/aarav HTTP/1.1" 200 4104
+(2020-09-03 17:10:41,638) - INFO django.server: 157 basehttp 30304 15584 "GET /marked-read/ HTTP/1.1" 200 13813
+(2020-09-03 17:10:49,981) - INFO django.server: 157 basehttp 30304 15584 "GET /index/ HTTP/1.1" 200 977932
+(2020-09-03 17:10:52,852) - INFO django.server: 157 basehttp 30304 15584 "POST /index/bookmark/24362448/ HTTP/1.1" 204 0
+(2020-09-03 17:10:54,052) - INFO django.server: 157 basehttp 30304 15584 "POST /index/bookmark/24352724/ HTTP/1.1" 204 0
+(2020-09-03 17:10:54,798) - INFO django.server: 157 basehttp 30304 15584 "POST /index/bookmark/24362021/ HTTP/1.1" 204 0
+(2020-09-03 17:10:55,468) - INFO django.server: 157 basehttp 30304 15584 "POST /index/bookmark/24362112/ HTTP/1.1" 204 0
+(2020-09-03 17:10:56,327) - INFO django.server: 157 basehttp 30304 15584 "POST /index/bookmark/24362047/ HTTP/1.1" 204 0
+(2020-09-03 17:10:57,029) - INFO django.server: 157 basehttp 30304 15584 "POST /index/bookmark/24361930/ HTTP/1.1" 204 0
+(2020-09-03 17:10:57,558) - INFO django.server: 157 basehttp 30304 15584 "POST /index/bookmark/24361599/ HTTP/1.1" 204 0
+(2020-09-03 17:10:58,179) - INFO django.server: 157 basehttp 30304 15584 "POST /index/bookmark/24361114/ HTTP/1.1" 204 0
+(2020-09-03 17:10:58,865) - INFO django.server: 157 basehttp 30304 15584 "POST /index/bookmark/24360985/ HTTP/1.1" 204 0
+(2020-09-03 17:11:00,312) - INFO django.server: 157 basehttp 30304 15584 "GET /bookmark/ HTTP/1.1" 200 26627
+(2020-09-03 17:11:03,832) - INFO django.server: 157 basehttp 30304 15584 "GET /bookmark/remove/24360985? HTTP/1.1" 204 0
+(2020-09-03 17:11:45,928) - INFO django.utils.autoreload: 222 autoreload 30304 28564 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 17:11:47,058) - INFO django.utils.autoreload: 598 autoreload 12940 4840 Watching for file changes with StatReloader
+(2020-09-03 17:11:53,355) - INFO django.server: 157 basehttp 12940 19496 "GET /bookmark/ HTTP/1.1" 200 24026
+(2020-09-03 17:11:53,462) - INFO django.server: 157 basehttp 12940 19496 "GET /static/images/favicon.png HTTP/1.1" 200 1412
+(2020-09-03 17:11:55,233) - INFO django.server: 157 basehttp 12940 19496 "GET /bookmark/remove/24361114? HTTP/1.1" 204 0
+(2020-09-03 17:12:13,240) - INFO django.utils.autoreload: 222 autoreload 12940 4840 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 17:12:14,288) - INFO django.utils.autoreload: 598 autoreload 25104 26112 Watching for file changes with StatReloader
+(2020-09-03 17:12:16,723) - INFO django.server: 157 basehttp 25104 15380 "GET /bookmark/ HTTP/1.1" 200 21410
+(2020-09-03 17:12:16,858) - INFO django.server: 157 basehttp 25104 15380 "GET /static/images/favicon.png HTTP/1.1" 200 1412
+(2020-09-03 17:12:19,711) - INFO django.server: 157 basehttp 25104 15380 "GET /bookmark/remove/24361599? HTTP/1.1" 204 0
+(2020-09-03 17:12:31,769) - INFO django.utils.autoreload: 222 autoreload 25104 26112 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 17:12:32,946) - INFO django.utils.autoreload: 598 autoreload 18140 15084 Watching for file changes with StatReloader
+(2020-09-03 17:12:37,148) - INFO django.utils.autoreload: 222 autoreload 18140 15084 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 17:12:38,215) - INFO django.utils.autoreload: 598 autoreload 13580 5004 Watching for file changes with StatReloader
+(2020-09-03 17:12:47,594) - INFO django.utils.autoreload: 222 autoreload 13580 5004 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 17:12:48,853) - INFO django.utils.autoreload: 598 autoreload 30540 20968 Watching for file changes with StatReloader
+(2020-09-03 17:14:28,468) - INFO django.utils.autoreload: 222 autoreload 30540 20968 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 17:14:29,642) - INFO django.utils.autoreload: 598 autoreload 12752 27568 Watching for file changes with StatReloader
+(2020-09-03 17:15:05,766) - INFO django.utils.autoreload: 222 autoreload 12752 27568 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 17:15:06,968) - INFO django.utils.autoreload: 598 autoreload 19880 19776 Watching for file changes with StatReloader
+(2020-09-03 17:15:15,475) - INFO django.server: 157 basehttp 19880 28216 "GET /bookmark/ HTTP/1.1" 200 18835
+(2020-09-03 17:15:15,592) - INFO django.server: 157 basehttp 19880 28216 "GET /static/images/favicon.png HTTP/1.1" 200 1412
+(2020-09-03 17:15:31,103) - ERROR django.request: 228 log 19880 28216 Internal Server Error: /bookmark/remove/24361930
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view mainapp.views.bookmark_details didn't return an HttpResponse object. It returned None instead.
+(2020-09-03 17:15:31,105) - ERROR django.server: 157 basehttp 19880 28216 "GET /bookmark/remove/24361930? HTTP/1.1" 500 64320
+(2020-09-03 17:15:53,782) - INFO django.server: 157 basehttp 19880 28216 "GET /bookmark/ HTTP/1.1" 200 18841
+(2020-09-03 17:15:59,883) - WARNING django.security.csrf: 228 log 19880 28216 Forbidden (CSRF token missing or incorrect.): /bookmark/remove/24361930
+(2020-09-03 17:15:59,886) - WARNING django.server: 157 basehttp 19880 28216 "POST /bookmark/remove/24361930 HTTP/1.1" 403 2513
+(2020-09-03 17:16:20,197) - INFO django.server: 157 basehttp 19880 28216 "GET /bookmark/ HTTP/1.1" 200 19831
+(2020-09-03 17:16:24,601) - INFO django.server: 157 basehttp 19880 28216 "POST /bookmark/remove/24362047 HTTP/1.1" 302 0
+(2020-09-03 17:16:24,658) - INFO django.server: 157 basehttp 19880 28216 "GET /bookmark/ HTTP/1.1" 200 16990
+(2020-09-03 17:16:26,720) - INFO django.server: 157 basehttp 19880 28216 "POST /bookmark/remove/24361930 HTTP/1.1" 302 0
+(2020-09-03 17:16:26,764) - INFO django.server: 157 basehttp 19880 28216 "GET /bookmark/ HTTP/1.1" 200 14169
+(2020-09-03 17:16:28,090) - INFO django.server: 157 basehttp 19880 28216 "POST /bookmark/remove/24362448 HTTP/1.1" 302 0
+(2020-09-03 17:16:28,148) - INFO django.server: 157 basehttp 19880 28216 "GET /bookmark/ HTTP/1.1" 200 11353
+(2020-09-03 17:16:37,288) - INFO django.server: 157 basehttp 19880 28216 "GET /index/ HTTP/1.1" 200 977932
+(2020-09-03 17:17:33,400) - INFO django.utils.autoreload: 222 autoreload 19880 19776 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 17:17:34,499) - INFO django.utils.autoreload: 598 autoreload 16380 23600 Watching for file changes with StatReloader
+(2020-09-03 17:17:58,348) - INFO django.utils.autoreload: 222 autoreload 16380 23600 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 17:17:59,409) - INFO django.utils.autoreload: 598 autoreload 22456 1204 Watching for file changes with StatReloader
+(2020-09-03 17:18:41,155) - INFO django.utils.autoreload: 222 autoreload 22456 1204 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 17:18:42,208) - INFO django.utils.autoreload: 598 autoreload 27088 21732 Watching for file changes with StatReloader
+(2020-09-03 17:18:56,925) - INFO django.utils.autoreload: 222 autoreload 27088 21732 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 17:18:58,118) - INFO django.utils.autoreload: 598 autoreload 22432 25056 Watching for file changes with StatReloader
+(2020-09-03 17:19:02,610) - INFO django.utils.autoreload: 222 autoreload 22432 25056 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 17:19:03,654) - INFO django.utils.autoreload: 598 autoreload 1548 29592 Watching for file changes with StatReloader
+(2020-09-03 17:20:08,775) - INFO django.utils.autoreload: 222 autoreload 1548 29592 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 17:20:09,833) - INFO django.utils.autoreload: 598 autoreload 28880 26548 Watching for file changes with StatReloader
+(2020-09-03 17:20:19,117) - INFO django.utils.autoreload: 222 autoreload 28880 26548 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 17:20:20,732) - INFO django.utils.autoreload: 598 autoreload 22212 15956 Watching for file changes with StatReloader
+(2020-09-03 18:00:34,205) - INFO django.utils.autoreload: 222 autoreload 22212 15956 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 18:00:35,296) - INFO django.utils.autoreload: 598 autoreload 13356 20404 Watching for file changes with StatReloader
+(2020-09-03 18:01:11,686) - INFO django.server: 157 basehttp 13356 27852 "GET /index/ HTTP/1.1" 200 996280
+(2020-09-03 18:16:25,241) - INFO django.utils.autoreload: 222 autoreload 13356 20404 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 18:16:27,592) - INFO django.utils.autoreload: 598 autoreload 23380 27036 Watching for file changes with StatReloader
+(2020-09-03 18:17:07,038) - INFO django.utils.autoreload: 222 autoreload 23380 27036 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 18:17:08,189) - INFO django.utils.autoreload: 598 autoreload 29056 29380 Watching for file changes with StatReloader
+(2020-09-03 18:17:26,506) - INFO django.utils.autoreload: 222 autoreload 29056 29380 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 18:17:27,555) - INFO django.utils.autoreload: 598 autoreload 31572 28564 Watching for file changes with StatReloader
+(2020-09-03 18:17:32,040) - INFO django.utils.autoreload: 222 autoreload 31572 28564 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 18:17:33,163) - INFO django.utils.autoreload: 598 autoreload 9504 28392 Watching for file changes with StatReloader
+(2020-09-03 18:19:01,358) - INFO django.utils.autoreload: 222 autoreload 9504 28392 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 18:19:02,659) - INFO django.utils.autoreload: 598 autoreload 23220 23600 Watching for file changes with StatReloader
+(2020-09-03 18:19:07,126) - INFO django.utils.autoreload: 222 autoreload 23220 23600 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 18:19:08,267) - INFO django.utils.autoreload: 598 autoreload 29688 31672 Watching for file changes with StatReloader
+(2020-09-03 18:21:50,522) - INFO django.utils.autoreload: 222 autoreload 29688 31672 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 18:21:51,765) - INFO django.utils.autoreload: 598 autoreload 22044 27100 Watching for file changes with StatReloader
+(2020-09-03 18:21:56,510) - INFO django.utils.autoreload: 222 autoreload 22044 27100 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 18:21:57,745) - INFO django.utils.autoreload: 598 autoreload 25568 2780 Watching for file changes with StatReloader
+(2020-09-03 18:22:04,528) - INFO django.utils.autoreload: 222 autoreload 25568 2780 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 18:22:05,642) - INFO django.utils.autoreload: 598 autoreload 9968 28492 Watching for file changes with StatReloader
+(2020-09-03 18:22:23,136) - INFO django.server: 157 basehttp 9968 9628 "GET /index/ HTTP/1.1" 200 113039
+(2020-09-03 18:34:47,099) - INFO django.server: 157 basehttp 9968 31440 "GET /index/ HTTP/1.1" 200 131852
+(2020-09-03 18:34:47,372) - INFO django.server: 157 basehttp 9968 31440 "GET /static/images/favicon.png HTTP/1.1" 200 1412
+(2020-09-03 18:35:02,284) - INFO django.server: 157 basehttp 9968 31440 "GET /index/?page=2 HTTP/1.1" 200 131854
+(2020-09-03 18:35:20,494) - INFO django.server: 157 basehttp 9968 31440 "GET /index/?page=1 HTTP/1.1" 200 131854
+(2020-09-03 18:35:31,371) - INFO django.server: 157 basehttp 9968 31440 "GET /index/ HTTP/1.1" 200 131854
+(2020-09-03 18:35:45,984) - INFO django.server: 157 basehttp 9968 31440 "GET /index/?page=10 HTTP/1.1" 200 131854
+(2020-09-03 18:36:52,687) - ERROR django.request: 228 log 9968 31440 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 179, in index
+    return render(request, 'mainapp/index.html', context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 277, in render
+    return self.nodelist_true.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 165, in render
+    values = list(values)
+TypeError: 'Paginator' object is not iterable
+(2020-09-03 18:36:52,707) - ERROR django.server: 157 basehttp 9968 31440 "GET /index/?page=10 HTTP/1.1" 500 198776
+(2020-09-03 18:36:52,736) - ERROR django.server: 157 basehttp 9968 31440 "GET /index/?page=10 HTTP/1.1" 500 59
+(2020-09-03 18:36:57,295) - ERROR django.request: 228 log 9968 9760 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 179, in index
+    return render(request, 'mainapp/index.html', context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 277, in render
+    return self.nodelist_true.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 165, in render
+    values = list(values)
+TypeError: 'Paginator' object is not iterable
+(2020-09-03 18:36:57,301) - ERROR django.server: 157 basehttp 9968 9760 "GET /index/ HTTP/1.1" 500 198108
+(2020-09-03 18:37:37,003) - INFO django.server: 157 basehttp 9968 9760 "GET /index/ HTTP/1.1" 200 131854
+(2020-09-03 18:39:06,038) - INFO django.utils.autoreload: 222 autoreload 9968 28492 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 18:39:07,199) - INFO django.utils.autoreload: 598 autoreload 28812 26128 Watching for file changes with StatReloader
+(2020-09-03 18:39:17,333) - INFO django.server: 157 basehttp 28812 20712 "GET /index/ HTTP/1.1" 200 131854
+(2020-09-03 18:39:31,633) - INFO django.utils.autoreload: 222 autoreload 28812 26128 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 18:39:32,742) - INFO django.utils.autoreload: 598 autoreload 4820 3864 Watching for file changes with StatReloader
+(2020-09-03 18:39:43,987) - INFO django.server: 157 basehttp 4820 12324 "GET /index/ HTTP/1.1" 200 131854
+(2020-09-03 18:40:18,094) - INFO django.utils.autoreload: 222 autoreload 4820 3864 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 18:40:19,214) - INFO django.utils.autoreload: 598 autoreload 31088 1520 Watching for file changes with StatReloader
+(2020-09-03 18:40:28,562) - ERROR django.request: 228 log 31088 22228 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 179, in index
+    print(context['data'].index())
+TypeError: index() missing 1 required positional argument: 'value'
+(2020-09-03 18:40:28,565) - ERROR django.server: 157 basehttp 31088 22228 "GET /index/ HTTP/1.1" 500 89189
+(2020-09-03 18:41:05,679) - INFO django.utils.autoreload: 222 autoreload 31088 1520 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 18:41:06,716) - INFO django.utils.autoreload: 598 autoreload 18424 8820 Watching for file changes with StatReloader
+(2020-09-03 18:41:16,345) - ERROR django.request: 228 log 18424 4272 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 179, in index
+    print(context['data'].index(1, context['data'].end_index()))
+  File "C:\Users\Sourab Sharma\AppData\Local\Programs\Python\Python36\lib\_collections_abc.py", line 920, in index
+    raise ValueError
+ValueError
+(2020-09-03 18:41:16,348) - ERROR django.server: 157 basehttp 18424 4272 "GET /index/ HTTP/1.1" 500 93083
+(2020-09-03 18:41:34,824) - INFO django.utils.autoreload: 222 autoreload 18424 8820 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 18:41:35,973) - INFO django.utils.autoreload: 598 autoreload 24920 18212 Watching for file changes with StatReloader
+(2020-09-03 18:41:45,876) - ERROR django.request: 228 log 24920 16048 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 179, in index
+    print(context['data'].index(1, 9999999))
+  File "C:\Users\Sourab Sharma\AppData\Local\Programs\Python\Python36\lib\_collections_abc.py", line 920, in index
+    raise ValueError
+ValueError
+(2020-09-03 18:41:45,879) - ERROR django.server: 157 basehttp 24920 16048 "GET /index/ HTTP/1.1" 500 93033
+(2020-09-03 18:42:17,224) - INFO django.utils.autoreload: 222 autoreload 24920 18212 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 18:42:18,493) - INFO django.utils.autoreload: 598 autoreload 14924 28736 Watching for file changes with StatReloader
+(2020-09-03 18:42:25,357) - ERROR django.request: 228 log 14924 16452 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 179, in index
+    print(context['data'].count())
+TypeError: count() missing 1 required positional argument: 'value'
+(2020-09-03 18:42:25,360) - ERROR django.server: 157 basehttp 14924 16452 "GET /index/ HTTP/1.1" 500 89169
+(2020-09-03 18:42:40,521) - INFO django.utils.autoreload: 222 autoreload 14924 28736 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 18:42:41,592) - INFO django.utils.autoreload: 598 autoreload 27652 3464 Watching for file changes with StatReloader
+(2020-09-03 18:42:51,041) - INFO django.server: 157 basehttp 27652 28812 "GET /index/ HTTP/1.1" 200 131852
+(2020-09-03 18:43:02,048) - INFO django.server: 157 basehttp 27652 28812 "GET /index/?page=2 HTTP/1.1" 200 131852
+(2020-09-03 18:44:00,991) - INFO django.utils.autoreload: 222 autoreload 27652 3464 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 18:44:02,148) - INFO django.utils.autoreload: 598 autoreload 11052 28644 Watching for file changes with StatReloader
+(2020-09-03 18:44:10,213) - INFO django.server: 157 basehttp 11052 23496 "GET /index/ HTTP/1.1" 200 3953
+(2020-09-03 18:44:22,606) - INFO django.server: 157 basehttp 11052 23496 "GET /index/?page=2 HTTP/1.1" 200 3953
+(2020-09-03 18:45:58,993) - INFO django.server: 157 basehttp 11052 23496 "GET /index/ HTTP/1.1" 200 2889
+(2020-09-03 18:45:59,005) - ERROR django.server: 157 basehttp 11052 23496 "GET /index/ HTTP/1.1" 500 59
+(2020-09-03 18:46:03,959) - INFO django.server: 157 basehttp 11052 10980 "GET /index/ HTTP/1.1" 200 2889
+(2020-09-03 18:54:12,016) - INFO django.server: 157 basehttp 11052 29000 "GET /index/ HTTP/1.1" 200 3140
+(2020-09-03 18:54:27,363) - INFO django.server: 157 basehttp 11052 29000 "GET /index/?page= HTTP/1.1" 200 3140
+(2020-09-03 18:55:12,758) - INFO django.server: 157 basehttp 11052 29000 "GET /index/ HTTP/1.1" 200 3140
+(2020-09-03 18:55:22,450) - INFO django.server: 157 basehttp 11052 29000 "GET /index/?page= HTTP/1.1" 200 3140
+(2020-09-03 18:55:51,188) - INFO django.server: 157 basehttp 11052 29000 "GET /index/ HTTP/1.1" 200 3140
+(2020-09-03 18:56:00,547) - INFO django.server: 157 basehttp 11052 29000 "GET /index/?page= HTTP/1.1" 200 3140
+(2020-09-03 18:56:52,386) - INFO django.server: 157 basehttp 11052 29000 "GET /index/ HTTP/1.1" 200 4301
+(2020-09-03 18:57:02,516) - INFO django.server: 157 basehttp 11052 29000 "GET /index/?page= HTTP/1.1" 200 4301
+(2020-09-03 18:57:24,169) - INFO django.server: 157 basehttp 11052 29000 "GET /index/ HTTP/1.1" 200 4302
+(2020-09-03 18:57:35,834) - INFO django.server: 157 basehttp 11052 29000 "GET /index/?page= HTTP/1.1" 200 4302
+(2020-09-03 18:57:44,420) - INFO django.server: 157 basehttp 11052 29000 "GET /index/?page= HTTP/1.1" 200 4302
+(2020-09-03 18:57:58,096) - INFO django.server: 157 basehttp 11052 29000 "GET /index/?page=10 HTTP/1.1" 200 4302
+(2020-09-03 18:59:03,884) - INFO django.server: 157 basehttp 11052 29000 "GET /index/ HTTP/1.1" 200 4302
+(2020-09-03 18:59:11,682) - INFO django.server: 157 basehttp 11052 29000 "GET /index/?page= HTTP/1.1" 200 4302
+(2020-09-03 19:00:08,932) - INFO django.server: 157 basehttp 11052 29000 "GET /index/ HTTP/1.1" 200 4289
+(2020-09-03 19:00:23,879) - INFO django.server: 157 basehttp 11052 29000 "GET /index/?page=1 HTTP/1.1" 200 4289
+(2020-09-03 19:03:50,236) - INFO django.server: 157 basehttp 11052 29000 "GET /index/ HTTP/1.1" 200 4294
+(2020-09-03 19:04:15,709) - INFO django.server: 157 basehttp 11052 29000 "GET /index/?page= HTTP/1.1" 200 4294
+(2020-09-03 19:04:31,529) - INFO django.server: 157 basehttp 11052 29000 "GET /index/?page=10 HTTP/1.1" 200 4294
+(2020-09-03 19:05:11,457) - INFO django.server: 157 basehttp 11052 29000 "GET /index/ HTTP/1.1" 200 4295
+(2020-09-03 19:05:21,658) - INFO django.server: 157 basehttp 11052 29000 "GET /index/?page=2 HTTP/1.1" 200 4295
+(2020-09-03 19:05:32,520) - INFO django.server: 157 basehttp 11052 29000 "GET /index/?page=9 HTTP/1.1" 200 4295
+(2020-09-03 19:05:53,938) - INFO django.server: 157 basehttp 11052 29000 "GET /index/?page=2 HTTP/1.1" 200 4295
+(2020-09-03 19:06:03,209) - INFO django.server: 157 basehttp 11052 29000 "GET /index/?page=10 HTTP/1.1" 200 4295
+(2020-09-03 19:08:00,649) - INFO django.server: 157 basehttp 11052 29000 "GET /index/ HTTP/1.1" 200 4308
+(2020-09-03 19:08:10,714) - INFO django.server: 157 basehttp 11052 29000 "GET /index/?page=10 HTTP/1.1" 200 4308
+(2020-09-03 19:09:23,943) - INFO django.server: 157 basehttp 11052 29000 "GET /index/ HTTP/1.1" 200 4196
+(2020-09-03 19:10:41,212) - ERROR django.request: 228 log 11052 29000 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 469, in parse
+    compile_func = self.tags[command]
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 180, in index
+    return render(request, 'mainapp/index.html', context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 477, in parse
+    raise self.error(token, e)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 477, in parse
+    raise self.error(token, e)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 477, in parse
+    raise self.error(token, e)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 811, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 471, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 527, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 17: 'endblock', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+(2020-09-03 19:10:41,344) - ERROR django.server: 157 basehttp 11052 29000 "GET /index/ HTTP/1.1" 500 189825
+(2020-09-03 19:11:10,391) - ERROR django.request: 228 log 11052 29000 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 180, in index
+    return render(request, 'mainapp/index.html', context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 165, in render
+    values = list(values)
+TypeError: 'int' object is not iterable
+(2020-09-03 19:11:10,394) - ERROR django.server: 157 basehttp 11052 29000 "GET /index/ HTTP/1.1" 500 173754
+(2020-09-03 19:11:34,026) - ERROR django.request: 228 log 11052 29000 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 180, in index
+    return render(request, 'mainapp/index.html', context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 165, in render
+    values = list(values)
+TypeError: 'int' object is not iterable
+(2020-09-03 19:11:34,029) - ERROR django.server: 157 basehttp 11052 29000 "GET /index/ HTTP/1.1" 500 173755
+(2020-09-03 19:14:47,640) - INFO django.server: 157 basehttp 11052 29000 "GET /index/ HTTP/1.1" 200 15927
+(2020-09-03 19:16:38,841) - INFO django.server: 157 basehttp 11052 29000 "GET /index/ HTTP/1.1" 200 3852702
+(2020-09-03 19:16:56,181) - INFO django.server: 157 basehttp 11052 29000 "GET /index/?page=2 HTTP/1.1" 200 3852702
+(2020-09-03 19:22:14,651) - INFO django.utils.autoreload: 222 autoreload 11052 28644 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:22:16,025) - INFO django.utils.autoreload: 598 autoreload 26924 6540 Watching for file changes with StatReloader
+(2020-09-03 19:22:30,123) - ERROR django.request: 228 log 26924 21232 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 180, in index
+    return render(request, 'mainapp/index.html', context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 165, in render
+    values = list(values)
+TypeError: 'NewsFeed' object is not iterable
+(2020-09-03 19:22:30,127) - ERROR django.server: 157 basehttp 26924 21232 "GET /index/ HTTP/1.1" 500 187533
+(2020-09-03 19:25:23,684) - ERROR django.request: 228 log 26924 21232 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 180, in index
+    return render(request, 'mainapp/index.html', context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 165, in render
+    values = list(values)
+TypeError: 'NewsFeed' object is not iterable
+(2020-09-03 19:25:23,687) - ERROR django.server: 157 basehttp 26924 21232 "GET /index/ HTTP/1.1" 500 186536
+(2020-09-03 19:25:44,599) - INFO django.server: 157 basehttp 26924 21232 "GET /index/ HTTP/1.1" 200 3670060
+(2020-09-03 19:26:18,552) - INFO django.server: 157 basehttp 26924 21232 "GET /index/ HTTP/1.1" 200 125111
+(2020-09-03 19:26:18,801) - INFO django.server: 157 basehttp 26924 21232 "GET /static/images/favicon.png HTTP/1.1" 200 1412
+(2020-09-03 19:27:29,156) - INFO django.utils.autoreload: 222 autoreload 26924 6540 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:27:30,659) - INFO django.utils.autoreload: 598 autoreload 14884 3464 Watching for file changes with StatReloader
+(2020-09-03 19:27:44,817) - INFO django.server: 157 basehttp 14884 16364 "GET /index/ HTTP/1.1" 200 125113
+(2020-09-03 19:28:22,964) - INFO django.utils.autoreload: 222 autoreload 14884 3464 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:28:24,494) - INFO django.utils.autoreload: 598 autoreload 27192 28536 Watching for file changes with StatReloader
+(2020-09-03 19:28:33,659) - ERROR django.request: 228 log 27192 12436 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 179, in index
+    print(context['obj'].count(), context['obj'])
+TypeError: count() missing 1 required positional argument: 'value'
+(2020-09-03 19:28:33,662) - ERROR django.server: 157 basehttp 27192 12436 "GET /index/ HTTP/1.1" 500 89257
+(2020-09-03 19:29:42,224) - INFO django.utils.autoreload: 222 autoreload 27192 28536 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:29:43,361) - INFO django.utils.autoreload: 598 autoreload 1076 27940 Watching for file changes with StatReloader
+(2020-09-03 19:29:51,170) - INFO django.server: 157 basehttp 1076 13056 "GET /index/ HTTP/1.1" 200 125073
+(2020-09-03 19:30:22,675) - INFO django.utils.autoreload: 222 autoreload 1076 27940 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:30:23,805) - INFO django.utils.autoreload: 598 autoreload 11772 23456 Watching for file changes with StatReloader
+(2020-09-03 19:30:32,045) - INFO django.server: 157 basehttp 11772 31732 "GET /index/ HTTP/1.1" 200 125073
+(2020-09-03 19:31:06,216) - INFO django.utils.autoreload: 222 autoreload 11772 23456 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:31:07,346) - INFO django.utils.autoreload: 598 autoreload 28148 31076 Watching for file changes with StatReloader
+(2020-09-03 19:31:18,602) - INFO django.server: 157 basehttp 28148 26936 "GET /index/ HTTP/1.1" 200 125074
+(2020-09-03 19:31:56,973) - INFO django.utils.autoreload: 222 autoreload 28148 31076 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:31:58,492) - INFO django.utils.autoreload: 598 autoreload 23488 14872 Watching for file changes with StatReloader
+(2020-09-03 19:32:06,136) - ERROR django.request: 228 log 23488 21860 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 179, in index
+    print(len([i for i in context['obj'].has_next()]))
+TypeError: 'bool' object is not iterable
+(2020-09-03 19:32:06,138) - ERROR django.server: 157 basehttp 23488 21860 "GET /index/ HTTP/1.1" 500 89038
+(2020-09-03 19:33:07,087) - INFO django.utils.autoreload: 222 autoreload 23488 14872 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:33:08,704) - INFO django.utils.autoreload: 598 autoreload 19704 9168 Watching for file changes with StatReloader
+(2020-09-03 19:33:15,695) - INFO django.server: 157 basehttp 19704 24128 "GET /index/ HTTP/1.1" 200 125075
+(2020-09-03 19:33:36,993) - INFO django.utils.autoreload: 222 autoreload 19704 9168 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:33:38,230) - INFO django.utils.autoreload: 598 autoreload 29924 22620 Watching for file changes with StatReloader
+(2020-09-03 19:33:46,410) - INFO django.server: 157 basehttp 29924 22860 "GET /index/ HTTP/1.1" 200 125075
+(2020-09-03 19:34:12,638) - INFO django.utils.autoreload: 222 autoreload 29924 22620 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:34:13,803) - INFO django.utils.autoreload: 598 autoreload 14768 23840 Watching for file changes with StatReloader
+(2020-09-03 19:34:31,469) - INFO django.server: 157 basehttp 14768 21276 "GET /index/ HTTP/1.1" 200 125075
+(2020-09-03 19:34:53,187) - INFO django.utils.autoreload: 222 autoreload 14768 23840 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:34:54,359) - INFO django.utils.autoreload: 598 autoreload 25748 21556 Watching for file changes with StatReloader
+(2020-09-03 19:35:01,853) - INFO django.server: 157 basehttp 25748 30240 "GET /index/ HTTP/1.1" 200 125075
+(2020-09-03 19:35:30,634) - INFO django.utils.autoreload: 222 autoreload 25748 21556 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:35:31,765) - INFO django.utils.autoreload: 598 autoreload 29044 29836 Watching for file changes with StatReloader
+(2020-09-03 19:35:39,343) - ERROR django.request: 228 log 29044 31708 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 179, in index
+    for i in query_pag.paginator.num_pages:
+TypeError: 'int' object is not iterable
+(2020-09-03 19:35:39,346) - ERROR django.server: 157 basehttp 29044 31708 "GET /index/ HTTP/1.1" 500 89111
+(2020-09-03 19:36:32,540) - INFO django.utils.autoreload: 222 autoreload 29044 29836 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:36:33,841) - INFO django.utils.autoreload: 598 autoreload 21360 11336 Watching for file changes with StatReloader
+(2020-09-03 19:36:35,594) - INFO django.utils.autoreload: 222 autoreload 21360 11336 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:36:36,689) - INFO django.utils.autoreload: 598 autoreload 16432 29276 Watching for file changes with StatReloader
+(2020-09-03 19:36:46,344) - ERROR django.request: 228 log 16432 27832 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 179, in index
+    for i in query_pag.paginator.num_pages:
+TypeError: 'int' object is not iterable
+(2020-09-03 19:36:46,347) - ERROR django.server: 157 basehttp 16432 27832 "GET /index/ HTTP/1.1" 500 89121
+(2020-09-03 19:37:20,557) - INFO django.utils.autoreload: 222 autoreload 16432 29276 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:37:21,676) - INFO django.utils.autoreload: 598 autoreload 31652 29056 Watching for file changes with StatReloader
+(2020-09-03 19:37:30,721) - ERROR django.request: 228 log 31652 17868 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 179, in index
+    for i in query_pag.paginator.num_pages:
+TypeError: 'int' object is not iterable
+(2020-09-03 19:37:30,723) - ERROR django.server: 157 basehttp 31652 17868 "GET /index/ HTTP/1.1" 500 89122
+(2020-09-03 19:37:42,719) - INFO django.utils.autoreload: 222 autoreload 31652 29056 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:37:43,874) - INFO django.utils.autoreload: 598 autoreload 20616 31608 Watching for file changes with StatReloader
+(2020-09-03 19:37:51,924) - ERROR django.request: 228 log 20616 25788 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 179, in index
+    for i in query_pag.paginator.num_pages:
+TypeError: 'int' object is not iterable
+(2020-09-03 19:37:51,927) - ERROR django.server: 157 basehttp 20616 25788 "GET /index/ HTTP/1.1" 500 89118
+(2020-09-03 19:38:15,895) - INFO django.utils.autoreload: 222 autoreload 20616 31608 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:38:17,061) - INFO django.utils.autoreload: 598 autoreload 29380 25268 Watching for file changes with StatReloader
+(2020-09-03 19:38:24,655) - INFO django.server: 157 basehttp 29380 21440 "GET /index/ HTTP/1.1" 200 125078
+(2020-09-03 19:38:42,738) - INFO django.utils.autoreload: 222 autoreload 29380 25268 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:38:43,830) - INFO django.utils.autoreload: 598 autoreload 21640 27220 Watching for file changes with StatReloader
+(2020-09-03 19:38:52,058) - ERROR django.request: 228 log 21640 31184 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 179, in index
+    print([i for i in query_pag.paginator])
+TypeError: 'Paginator' object is not iterable
+(2020-09-03 19:38:52,060) - ERROR django.server: 157 basehttp 21640 31184 "GET /index/ HTTP/1.1" 500 89123
+(2020-09-03 19:39:09,114) - INFO django.utils.autoreload: 222 autoreload 21640 27220 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:39:10,353) - INFO django.utils.autoreload: 598 autoreload 30136 31232 Watching for file changes with StatReloader
+(2020-09-03 19:39:28,689) - INFO django.utils.autoreload: 222 autoreload 30136 31232 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:39:29,813) - INFO django.utils.autoreload: 598 autoreload 6412 31300 Watching for file changes with StatReloader
+(2020-09-03 19:39:39,525) - ERROR django.request: 228 log 6412 31260 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 179, in index
+    print(list(query_pag.paginator))
+TypeError: 'Paginator' object is not iterable
+(2020-09-03 19:39:39,527) - ERROR django.server: 157 basehttp 6412 31260 "GET /index/ HTTP/1.1" 500 89086
+(2020-09-03 19:40:34,662) - INFO django.utils.autoreload: 222 autoreload 6412 31300 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:40:35,852) - INFO django.utils.autoreload: 598 autoreload 12436 7912 Watching for file changes with StatReloader
+(2020-09-03 19:40:42,953) - ERROR django.request: 228 log 12436 31032 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 179, in index
+    print(list(query_pag.number))
+TypeError: 'int' object is not iterable
+(2020-09-03 19:40:42,955) - ERROR django.server: 157 basehttp 12436 31032 "GET /index/ HTTP/1.1" 500 88930
+(2020-09-03 19:41:13,407) - INFO django.utils.autoreload: 222 autoreload 12436 7912 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:41:14,591) - INFO django.utils.autoreload: 598 autoreload 17560 17872 Watching for file changes with StatReloader
+(2020-09-03 19:41:22,853) - INFO django.server: 157 basehttp 17560 20372 "GET /index/ HTTP/1.1" 200 125078
+(2020-09-03 19:41:42,120) - INFO django.utils.autoreload: 222 autoreload 17560 17872 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:41:43,412) - INFO django.utils.autoreload: 598 autoreload 9628 23472 Watching for file changes with StatReloader
+(2020-09-03 19:41:51,660) - INFO django.server: 157 basehttp 9628 7068 "GET /index/ HTTP/1.1" 200 125078
+(2020-09-03 19:42:12,064) - INFO django.server: 157 basehttp 9628 7068 "GET /index/ HTTP/1.1" 200 125078
+(2020-09-03 19:42:40,069) - INFO django.utils.autoreload: 222 autoreload 9628 23472 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:42:41,090) - INFO django.utils.autoreload: 598 autoreload 16720 31588 Watching for file changes with StatReloader
+(2020-09-03 19:42:50,348) - INFO django.server: 157 basehttp 16720 15084 "GET /index/ HTTP/1.1" 200 125078
+(2020-09-03 19:43:24,434) - INFO django.utils.autoreload: 222 autoreload 16720 31588 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:43:25,510) - INFO django.utils.autoreload: 598 autoreload 29244 11512 Watching for file changes with StatReloader
+(2020-09-03 19:43:34,338) - ERROR django.request: 228 log 29244 29360 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 179, in index
+    print([i for i in query_pag.page(range(1,10))])
+AttributeError: 'Page' object has no attribute 'page'
+(2020-09-03 19:43:34,341) - ERROR django.server: 157 basehttp 29244 29360 "GET /index/ HTTP/1.1" 500 89087
+(2020-09-03 19:43:53,357) - INFO django.utils.autoreload: 222 autoreload 29244 11512 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:43:54,481) - INFO django.utils.autoreload: 598 autoreload 21168 10980 Watching for file changes with StatReloader
+(2020-09-03 19:43:58,838) - INFO django.utils.autoreload: 222 autoreload 21168 10980 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:44:00,160) - INFO django.utils.autoreload: 598 autoreload 26948 26532 Watching for file changes with StatReloader
+(2020-09-03 19:44:13,499) - INFO django.utils.autoreload: 222 autoreload 26948 26532 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:44:14,593) - INFO django.utils.autoreload: 598 autoreload 9080 20436 Watching for file changes with StatReloader
+(2020-09-03 19:44:22,842) - ERROR django.request: 228 log 9080 12036 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 182, in index
+    return render(request, 'mainapp/index.html', context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 165, in render
+    values = list(values)
+TypeError: 'Paginator' object is not iterable
+(2020-09-03 19:44:22,848) - ERROR django.server: 157 basehttp 9080 12036 "GET /index/ HTTP/1.1" 500 175709
+(2020-09-03 19:44:59,638) - INFO django.utils.autoreload: 222 autoreload 9080 20436 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:45:00,711) - INFO django.utils.autoreload: 598 autoreload 10580 31388 Watching for file changes with StatReloader
+(2020-09-03 19:45:09,357) - INFO django.server: 157 basehttp 10580 29364 "GET /index/ HTTP/1.1" 200 55892
+(2020-09-03 19:45:55,841) - INFO django.utils.autoreload: 222 autoreload 10580 31388 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:45:57,069) - INFO django.utils.autoreload: 598 autoreload 9600 31492 Watching for file changes with StatReloader
+(2020-09-03 19:46:06,294) - INFO django.utils.autoreload: 222 autoreload 9600 31492 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:46:07,535) - INFO django.utils.autoreload: 598 autoreload 31416 27560 Watching for file changes with StatReloader
+(2020-09-03 19:46:16,167) - ERROR django.request: 228 log 31416 1884 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 180, in index
+    print(query_set.page(i))
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\paginator.py", line 70, in page
+    number = self.validate_number(number)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\paginator.py", line 47, in validate_number
+    raise EmptyPage(_('That page number is less than 1'))
+django.core.paginator.EmptyPage: That page number is less than 1
+(2020-09-03 19:46:16,169) - ERROR django.server: 157 basehttp 31416 1884 "GET /index/ HTTP/1.1" 500 96329
+(2020-09-03 19:46:24,494) - INFO django.utils.autoreload: 222 autoreload 31416 27560 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:46:25,640) - INFO django.utils.autoreload: 598 autoreload 16720 27176 Watching for file changes with StatReloader
+(2020-09-03 19:46:32,778) - INFO django.server: 157 basehttp 16720 24808 "GET /index/ HTTP/1.1" 200 55892
+(2020-09-03 19:46:41,563) - INFO django.utils.autoreload: 222 autoreload 16720 27176 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:46:42,755) - INFO django.utils.autoreload: 598 autoreload 18096 29408 Watching for file changes with StatReloader
+(2020-09-03 19:46:51,106) - INFO django.server: 157 basehttp 18096 27136 "GET /index/ HTTP/1.1" 200 55892
+(2020-09-03 19:47:11,152) - INFO django.utils.autoreload: 222 autoreload 18096 29408 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:47:12,458) - INFO django.utils.autoreload: 598 autoreload 31736 4840 Watching for file changes with StatReloader
+(2020-09-03 19:47:19,689) - INFO django.server: 157 basehttp 31736 23456 "GET /index/ HTTP/1.1" 200 55892
+(2020-09-03 19:47:45,367) - INFO django.utils.autoreload: 222 autoreload 31736 4840 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:47:46,531) - INFO django.utils.autoreload: 598 autoreload 19776 12036 Watching for file changes with StatReloader
+(2020-09-03 19:50:46,268) - ERROR django.request: 228 log 19776 30768 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 181, in index
+    print(enumerate(j))
+TypeError: 'NewsFeed' object is not iterable
+(2020-09-03 19:50:46,270) - ERROR django.server: 157 basehttp 19776 30768 "GET /index/ HTTP/1.1" 500 88996
+(2020-09-03 19:50:58,479) - INFO django.utils.autoreload: 222 autoreload 19776 12036 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 19:50:59,513) - INFO django.utils.autoreload: 598 autoreload 13564 22668 Watching for file changes with StatReloader
+(2020-09-03 19:51:12,340) - ERROR django.request: 228 log 13564 30928 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 184, in index
+    return render(request, 'mainapp/index.html', context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 477, in parse
+    raise self.error(token, e)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 477, in parse
+    raise self.error(token, e)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 477, in parse
+    raise self.error(token, e)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 952, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 477, in parse
+    raise self.error(token, e)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 811, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 477, in parse
+    raise self.error(token, e)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 810, in do_for
+    sequence = parser.compile_filter(bits[in_index + 1])
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 562, in compile_filter
+    return FilterExpression(token, self)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 662, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '[num]' from 'obj[num]'
+(2020-09-03 19:51:12,352) - ERROR django.server: 157 basehttp 13564 30928 "GET /index/ HTTP/1.1" 500 226232
+(2020-09-03 19:51:54,901) - ERROR django.request: 228 log 13564 30928 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 469, in parse
+    compile_func = self.tags[command]
+KeyError: 'else'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 184, in index
+    return render(request, 'mainapp/index.html', context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 477, in parse
+    raise self.error(token, e)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 477, in parse
+    raise self.error(token, e)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 477, in parse
+    raise self.error(token, e)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 952, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 477, in parse
+    raise self.error(token, e)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 811, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 471, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 527, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 67: 'else', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+(2020-09-03 19:51:54,905) - ERROR django.server: 157 basehttp 13564 30928 "GET /index/ HTTP/1.1" 500 213848
+(2020-09-03 19:52:41,753) - INFO django.server: 157 basehttp 13564 30928 "GET /index/ HTTP/1.1" 200 5170
+(2020-09-03 19:56:20,874) - INFO django.server: 157 basehttp 13564 30928 "GET /index/ HTTP/1.1" 200 2890
+(2020-09-03 20:18:39,509) - INFO django.utils.autoreload: 222 autoreload 13564 22668 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 20:18:40,811) - INFO django.utils.autoreload: 598 autoreload 9860 13904 Watching for file changes with StatReloader
+(2020-09-03 20:20:29,436) - INFO django.utils.autoreload: 222 autoreload 9860 13904 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 20:20:30,486) - INFO django.utils.autoreload: 598 autoreload 1684 21464 Watching for file changes with StatReloader
+(2020-09-03 20:20:35,914) - INFO django.utils.autoreload: 222 autoreload 1684 21464 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 20:20:36,955) - INFO django.utils.autoreload: 598 autoreload 27088 19304 Watching for file changes with StatReloader
+(2020-09-03 20:20:54,642) - INFO django.utils.autoreload: 222 autoreload 27088 19304 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 20:20:55,676) - INFO django.utils.autoreload: 598 autoreload 31572 8872 Watching for file changes with StatReloader
+(2020-09-03 20:21:07,565) - INFO django.utils.autoreload: 222 autoreload 31572 8872 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 20:21:08,609) - INFO django.utils.autoreload: 598 autoreload 26544 27408 Watching for file changes with StatReloader
+(2020-09-03 20:21:26,227) - INFO django.utils.autoreload: 222 autoreload 26544 27408 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 20:21:27,240) - INFO django.utils.autoreload: 598 autoreload 20720 9716 Watching for file changes with StatReloader
+(2020-09-03 20:21:42,407) - INFO django.utils.autoreload: 222 autoreload 20720 9716 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 20:21:43,448) - INFO django.utils.autoreload: 598 autoreload 29468 9300 Watching for file changes with StatReloader
+(2020-09-03 20:22:25,991) - INFO django.server: 157 basehttp 29468 14768 "GET /index/ HTTP/1.1" 200 1174799
+(2020-09-03 20:25:56,577) - INFO django.utils.autoreload: 222 autoreload 29468 9300 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 20:25:57,594) - INFO django.utils.autoreload: 598 autoreload 30004 23100 Watching for file changes with StatReloader
+(2020-09-03 20:26:16,890) - INFO django.utils.autoreload: 222 autoreload 30004 23100 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 20:26:18,100) - INFO django.utils.autoreload: 598 autoreload 10088 8480 Watching for file changes with StatReloader
+(2020-09-03 20:26:22,315) - INFO django.utils.autoreload: 222 autoreload 10088 8480 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 20:26:23,386) - INFO django.utils.autoreload: 598 autoreload 27192 20952 Watching for file changes with StatReloader
+(2020-09-03 20:26:37,587) - INFO django.utils.autoreload: 222 autoreload 27192 20952 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 20:26:38,934) - INFO django.utils.autoreload: 598 autoreload 3572 26948 Watching for file changes with StatReloader
+(2020-09-03 20:27:13,685) - INFO django.utils.autoreload: 222 autoreload 3572 26948 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 20:27:14,771) - INFO django.utils.autoreload: 598 autoreload 3896 9512 Watching for file changes with StatReloader
+(2020-09-03 20:29:20,921) - INFO django.server: 157 basehttp 3896 25280 "GET /index/ HTTP/1.1" 200 5170
+(2020-09-03 20:30:25,106) - INFO django.server: 157 basehttp 3896 25280 "GET /index/ HTTP/1.1" 200 5170
+(2020-09-03 20:30:25,239) - INFO django.server: 157 basehttp 3896 25280 "GET /static/images/favicon.png HTTP/1.1" 200 1412
+(2020-09-03 20:31:02,003) - INFO django.server: 157 basehttp 3896 25280 "GET /index/ HTTP/1.1" 200 5311
+(2020-09-03 20:31:02,151) - INFO django.server: 157 basehttp 3896 25280 "GET /static/images/favicon.png HTTP/1.1" 200 1412
+(2020-09-03 20:31:47,452) - INFO django.server: 157 basehttp 3896 25280 "GET /index/ HTTP/1.1" 200 5184
+(2020-09-03 20:31:47,559) - INFO django.server: 157 basehttp 3896 25280 "GET /static/images/favicon.png HTTP/1.1" 200 1412
+(2020-09-03 20:32:01,670) - INFO django.server: 157 basehttp 3896 25280 "GET /index/ HTTP/1.1" 200 5184
+(2020-09-03 20:32:01,787) - INFO django.server: 157 basehttp 3896 25280 "GET /static/images/favicon.png HTTP/1.1" 200 1412
+(2020-09-03 20:32:50,692) - ERROR django.request: 228 log 3896 25280 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 169, in index
+    return render(request, 'mainapp/index.html', context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 477, in parse
+    raise self.error(token, e)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 477, in parse
+    raise self.error(token, e)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 477, in parse
+    raise self.error(token, e)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 952, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 477, in parse
+    raise self.error(token, e)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 811, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 477, in parse
+    raise self.error(token, e)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 810, in do_for
+    sequence = parser.compile_filter(bits[in_index + 1])
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 562, in compile_filter
+    return FilterExpression(token, self)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 662, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '{num}' from 'obj.get_page.{num}'
+(2020-09-03 20:32:50,697) - ERROR django.server: 157 basehttp 3896 25280 "GET /index/ HTTP/1.1" 500 226764
+(2020-09-03 20:39:21,699) - INFO django.utils.autoreload: 222 autoreload 3896 9512 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 20:39:22,800) - INFO django.utils.autoreload: 598 autoreload 28668 26084 Watching for file changes with StatReloader
+(2020-09-03 20:39:35,082) - INFO django.server: 157 basehttp 28668 20328 "GET /index/ HTTP/1.1" 200 2914
+(2020-09-03 20:40:13,551) - INFO django.utils.autoreload: 222 autoreload 28668 26084 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 20:40:14,613) - INFO django.utils.autoreload: 598 autoreload 22784 5996 Watching for file changes with StatReloader
+(2020-09-03 20:40:21,382) - INFO django.server: 157 basehttp 22784 28504 "GET /index/ HTTP/1.1" 200 2914
+(2020-09-03 20:40:21,488) - INFO django.server: 157 basehttp 22784 28504 "GET /static/images/favicon.png HTTP/1.1" 200 1412
+(2020-09-03 20:40:56,403) - INFO django.utils.autoreload: 222 autoreload 22784 5996 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 20:40:57,674) - INFO django.utils.autoreload: 598 autoreload 31332 30744 Watching for file changes with StatReloader
+(2020-09-03 20:41:15,364) - INFO django.utils.autoreload: 222 autoreload 31332 30744 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 20:41:16,475) - INFO django.utils.autoreload: 598 autoreload 20952 26708 Watching for file changes with StatReloader
+(2020-09-03 20:41:25,893) - INFO django.server: 157 basehttp 20952 10152 "GET /index/ HTTP/1.1" 200 2914
+(2020-09-03 20:41:47,652) - INFO django.utils.autoreload: 222 autoreload 20952 26708 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 20:41:48,779) - INFO django.utils.autoreload: 598 autoreload 19644 3864 Watching for file changes with StatReloader
+(2020-09-03 20:41:56,018) - INFO django.server: 157 basehttp 19644 30628 "GET /index/ HTTP/1.1" 200 2914
+(2020-09-03 20:43:03,948) - INFO django.server: 157 basehttp 19644 30628 "GET /index/ HTTP/1.1" 200 5170
+(2020-09-03 20:43:04,100) - INFO django.server: 157 basehttp 19644 30628 "GET /static/images/favicon.png HTTP/1.1" 200 1412
+(2020-09-03 20:46:42,422) - INFO django.utils.autoreload: 222 autoreload 19644 3864 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 20:46:43,533) - INFO django.utils.autoreload: 598 autoreload 9308 13832 Watching for file changes with StatReloader
+(2020-09-03 20:46:47,682) - INFO django.utils.autoreload: 222 autoreload 9308 13832 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 20:46:48,727) - INFO django.utils.autoreload: 598 autoreload 30332 20636 Watching for file changes with StatReloader
+(2020-09-03 20:47:10,828) - INFO django.utils.autoreload: 222 autoreload 30332 20636 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 20:47:11,986) - INFO django.utils.autoreload: 598 autoreload 24792 11768 Watching for file changes with StatReloader
+(2020-09-03 20:58:18,381) - INFO django.utils.autoreload: 222 autoreload 24792 11768 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 20:58:19,647) - INFO django.utils.autoreload: 598 autoreload 28024 10708 Watching for file changes with StatReloader
+(2020-09-03 20:58:27,945) - INFO django.utils.autoreload: 222 autoreload 28024 10708 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 20:58:28,966) - INFO django.utils.autoreload: 598 autoreload 31592 28108 Watching for file changes with StatReloader
+(2020-09-03 20:58:47,532) - INFO django.utils.autoreload: 222 autoreload 31592 28108 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 20:58:48,635) - INFO django.utils.autoreload: 598 autoreload 30572 12888 Watching for file changes with StatReloader
+(2020-09-03 20:59:08,664) - INFO django.utils.autoreload: 222 autoreload 30572 12888 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 20:59:09,777) - INFO django.utils.autoreload: 598 autoreload 26612 31316 Watching for file changes with StatReloader
+(2020-09-03 20:59:18,747) - INFO django.utils.autoreload: 222 autoreload 26612 31316 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 20:59:19,783) - INFO django.utils.autoreload: 598 autoreload 8212 9588 Watching for file changes with StatReloader
+(2020-09-03 20:59:51,885) - INFO django.utils.autoreload: 222 autoreload 8212 9588 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 20:59:52,880) - INFO django.utils.autoreload: 598 autoreload 20388 31252 Watching for file changes with StatReloader
+(2020-09-03 21:00:20,961) - INFO django.utils.autoreload: 222 autoreload 20388 31252 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 21:00:22,053) - INFO django.utils.autoreload: 598 autoreload 10680 23416 Watching for file changes with StatReloader
+(2020-09-03 21:00:31,190) - INFO django.utils.autoreload: 222 autoreload 10680 23416 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 21:00:32,516) - INFO django.utils.autoreload: 598 autoreload 26224 30768 Watching for file changes with StatReloader
+(2020-09-03 21:00:58,229) - INFO django.utils.autoreload: 222 autoreload 26224 30768 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 21:00:59,338) - INFO django.utils.autoreload: 598 autoreload 25848 30280 Watching for file changes with StatReloader
+(2020-09-03 21:01:43,885) - INFO django.utils.autoreload: 222 autoreload 25848 30280 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 21:01:44,966) - INFO django.utils.autoreload: 598 autoreload 31068 22996 Watching for file changes with StatReloader
+(2020-09-03 21:02:13,540) - INFO django.utils.autoreload: 222 autoreload 31068 22996 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 21:02:14,649) - INFO django.utils.autoreload: 598 autoreload 24808 23156 Watching for file changes with StatReloader
+(2020-09-03 21:02:28,115) - INFO django.utils.autoreload: 222 autoreload 24808 23156 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 21:02:29,408) - INFO django.utils.autoreload: 598 autoreload 21440 30960 Watching for file changes with StatReloader
+(2020-09-03 21:02:42,706) - ERROR django.request: 228 log 21440 30752 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 177, in index
+    return render(request, 'mainapp/index.html', context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 477, in parse
+    raise self.error(token, e)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 477, in parse
+    raise self.error(token, e)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 477, in parse
+    raise self.error(token, e)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 952, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 477, in parse
+    raise self.error(token, e)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 811, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 477, in parse
+    raise self.error(token, e)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 972, in do_if
+    raise TemplateSyntaxError('Malformed template tag at line {0}: "{1}"'.format(token.lineno, token.contents))
+django.template.exceptions.TemplateSyntaxError: Malformed template tag at line 11: "else if obj.paginator.has_previous"
+(2020-09-03 21:02:42,712) - ERROR django.server: 157 basehttp 21440 30752 "GET /index/ HTTP/1.1" 500 216542
+(2020-09-03 21:04:40,762) - INFO django.server: 157 basehttp 21440 30752 "GET /index/ HTTP/1.1" 200 119876
+(2020-09-03 21:04:52,324) - INFO django.server: 157 basehttp 21440 30752 "GET /index/?page=2 HTTP/1.1" 200 119908
+(2020-09-03 21:05:05,885) - INFO django.server: 157 basehttp 21440 30752 "GET /index/?page=3 HTTP/1.1" 200 120078
+(2020-09-03 21:05:14,952) - INFO django.server: 157 basehttp 21440 30752 "GET /index/?page=4 HTTP/1.1" 200 120034
+(2020-09-03 21:05:24,000) - INFO django.server: 157 basehttp 21440 30752 "GET /index/?page=5 HTTP/1.1" 200 119407
+(2020-09-03 21:05:35,525) - INFO django.server: 157 basehttp 21440 30752 "GET /index/?page=6 HTTP/1.1" 200 119640
+(2020-09-03 21:07:38,231) - INFO django.utils.autoreload: 222 autoreload 21440 30960 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 21:07:39,313) - INFO django.utils.autoreload: 598 autoreload 30640 7616 Watching for file changes with StatReloader
+(2020-09-03 21:08:06,066) - INFO django.server: 157 basehttp 30640 24636 "GET /index/?page=6 HTTP/1.1" 200 120493
+(2020-09-03 21:08:06,233) - INFO django.server: 157 basehttp 30640 24636 "GET /static/images/favicon.png HTTP/1.1" 200 1412
+(2020-09-03 21:12:32,077) - INFO django.utils.autoreload: 222 autoreload 30640 7616 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 21:12:33,305) - INFO django.utils.autoreload: 598 autoreload 7912 30044 Watching for file changes with StatReloader
+(2020-09-03 21:13:45,416) - ERROR django.request: 228 log 7912 6576 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 175, in index
+    context['obj'] = query_set.page
+AttributeError: 'Page' object has no attribute 'page'
+(2020-09-03 21:13:45,420) - ERROR django.server: 157 basehttp 7912 6576 "GET /index/ HTTP/1.1" 500 89444
+(2020-09-03 21:13:58,797) - INFO django.utils.autoreload: 222 autoreload 7912 30044 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 21:14:00,045) - INFO django.utils.autoreload: 598 autoreload 28108 25280 Watching for file changes with StatReloader
+(2020-09-03 21:14:06,764) - ERROR django.request: 228 log 28108 31540 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 178, in index
+    return render(request, 'mainapp/index.html', context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 986, in render
+    output = self.filter_expression.resolve(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 670, in resolve
+    obj = self.var.resolve(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 795, in resolve
+    value = self._resolve_lookup(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 857, in _resolve_lookup
+    current = current()
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\paginator.py", line 177, in previous_page_number
+    return self.paginator.validate_number(self.number - 1)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\paginator.py", line 47, in validate_number
+    raise EmptyPage(_('That page number is less than 1'))
+django.core.paginator.EmptyPage: That page number is less than 1
+(2020-09-03 21:14:06,770) - ERROR django.server: 157 basehttp 28108 31540 "GET /index/ HTTP/1.1" 500 209743
+(2020-09-03 21:14:49,021) - INFO django.utils.autoreload: 222 autoreload 28108 25280 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 21:14:50,074) - INFO django.utils.autoreload: 598 autoreload 20600 26892 Watching for file changes with StatReloader
+(2020-09-03 21:14:56,925) - INFO django.utils.autoreload: 222 autoreload 20600 26892 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 21:14:57,915) - INFO django.utils.autoreload: 598 autoreload 13056 11028 Watching for file changes with StatReloader
+(2020-09-03 21:15:00,859) - INFO django.utils.autoreload: 222 autoreload 13056 11028 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 21:15:01,914) - INFO django.utils.autoreload: 598 autoreload 31124 22892 Watching for file changes with StatReloader
+(2020-09-03 21:15:11,592) - ERROR django.request: 228 log 31124 10880 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 178, in index
+    return render(request, 'mainapp/index.html', context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 986, in render
+    output = self.filter_expression.resolve(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 670, in resolve
+    obj = self.var.resolve(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 795, in resolve
+    value = self._resolve_lookup(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 857, in _resolve_lookup
+    current = current()
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\paginator.py", line 177, in previous_page_number
+    return self.paginator.validate_number(self.number - 1)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\paginator.py", line 47, in validate_number
+    raise EmptyPage(_('That page number is less than 1'))
+django.core.paginator.EmptyPage: That page number is less than 1
+(2020-09-03 21:15:11,599) - ERROR django.server: 157 basehttp 31124 10880 "GET /index/ HTTP/1.1" 500 209172
+(2020-09-03 21:15:26,475) - INFO django.utils.autoreload: 222 autoreload 31124 22892 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 21:15:27,701) - INFO django.utils.autoreload: 598 autoreload 21768 27832 Watching for file changes with StatReloader
+(2020-09-03 21:15:46,462) - INFO django.utils.autoreload: 222 autoreload 21768 27832 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 21:15:47,461) - INFO django.utils.autoreload: 598 autoreload 31344 31532 Watching for file changes with StatReloader
+(2020-09-03 21:15:59,476) - INFO django.utils.autoreload: 222 autoreload 31344 31532 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 21:16:00,661) - INFO django.utils.autoreload: 598 autoreload 31432 29976 Watching for file changes with StatReloader
+(2020-09-03 21:16:10,277) - ERROR django.request: 228 log 31432 18856 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 181, in index
+    return render(request, 'mainapp/index.html', context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 986, in render
+    output = self.filter_expression.resolve(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 670, in resolve
+    obj = self.var.resolve(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 795, in resolve
+    value = self._resolve_lookup(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 857, in _resolve_lookup
+    current = current()
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\paginator.py", line 177, in previous_page_number
+    return self.paginator.validate_number(self.number - 1)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\paginator.py", line 47, in validate_number
+    raise EmptyPage(_('That page number is less than 1'))
+django.core.paginator.EmptyPage: That page number is less than 1
+(2020-09-03 21:16:10,286) - ERROR django.server: 157 basehttp 31432 18856 "GET /index/ HTTP/1.1" 500 209152
+(2020-09-03 21:16:36,887) - INFO django.utils.autoreload: 222 autoreload 31432 29976 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 21:16:37,998) - INFO django.utils.autoreload: 598 autoreload 12716 27784 Watching for file changes with StatReloader
+(2020-09-03 21:16:47,230) - INFO django.utils.autoreload: 222 autoreload 12716 27784 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 21:16:48,260) - INFO django.utils.autoreload: 598 autoreload 22452 27168 Watching for file changes with StatReloader
+(2020-09-03 21:17:03,319) - INFO django.utils.autoreload: 222 autoreload 22452 27168 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 21:17:04,413) - INFO django.utils.autoreload: 598 autoreload 3008 27280 Watching for file changes with StatReloader
+(2020-09-03 21:17:16,968) - ERROR django.request: 228 log 3008 22856 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 181, in index
+    return render(request, 'mainapp/index.html', context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 986, in render
+    output = self.filter_expression.resolve(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 670, in resolve
+    obj = self.var.resolve(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 795, in resolve
+    value = self._resolve_lookup(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 857, in _resolve_lookup
+    current = current()
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\paginator.py", line 177, in previous_page_number
+    return self.paginator.validate_number(self.number - 1)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\paginator.py", line 47, in validate_number
+    raise EmptyPage(_('That page number is less than 1'))
+django.core.paginator.EmptyPage: That page number is less than 1
+(2020-09-03 21:17:16,972) - ERROR django.server: 157 basehttp 3008 22856 "GET /index/?page=1 HTTP/1.1" 500 209325
+(2020-09-03 21:18:58,209) - ERROR django.request: 228 log 3008 22856 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 181, in index
+    return render(request, 'mainapp/index.html', context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 986, in render
+    output = self.filter_expression.resolve(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 670, in resolve
+    obj = self.var.resolve(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 795, in resolve
+    value = self._resolve_lookup(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 857, in _resolve_lookup
+    current = current()
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\paginator.py", line 177, in previous_page_number
+    return self.paginator.validate_number(self.number - 1)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\paginator.py", line 47, in validate_number
+    raise EmptyPage(_('That page number is less than 1'))
+django.core.paginator.EmptyPage: That page number is less than 1
+(2020-09-03 21:18:58,212) - ERROR django.server: 157 basehttp 3008 22856 "GET /index/ HTTP/1.1" 500 208585
+(2020-09-03 21:19:56,079) - INFO django.utils.autoreload: 222 autoreload 3008 27280 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 21:19:57,136) - INFO django.utils.autoreload: 598 autoreload 17504 17420 Watching for file changes with StatReloader
+(2020-09-03 21:20:04,985) - ERROR django.request: 228 log 17504 23204 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 181, in index
+    return render(request, 'mainapp/index.html', context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 986, in render
+    output = self.filter_expression.resolve(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 670, in resolve
+    obj = self.var.resolve(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 795, in resolve
+    value = self._resolve_lookup(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 857, in _resolve_lookup
+    current = current()
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\paginator.py", line 177, in previous_page_number
+    return self.paginator.validate_number(self.number - 1)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\paginator.py", line 47, in validate_number
+    raise EmptyPage(_('That page number is less than 1'))
+django.core.paginator.EmptyPage: That page number is less than 1
+(2020-09-03 21:20:04,990) - ERROR django.server: 157 basehttp 17504 23204 "GET /index/ HTTP/1.1" 500 208949
+(2020-09-03 21:21:40,839) - INFO django.server: 157 basehttp 17504 23204 "GET /index/ HTTP/1.1" 200 120883
+(2020-09-03 21:21:52,466) - INFO django.server: 157 basehttp 17504 23204 "GET /index/?page=1 HTTP/1.1" 200 120759
+(2020-09-03 21:22:02,911) - INFO django.server: 157 basehttp 17504 23204 "GET /index/?page=2 HTTP/1.1" 200 121109
+(2020-09-03 21:23:26,642) - INFO django.server: 157 basehttp 17504 23204 "GET /index/ HTTP/1.1" 200 120765
+(2020-09-03 21:23:43,475) - INFO django.utils.autoreload: 222 autoreload 17504 17420 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 21:23:44,882) - INFO django.utils.autoreload: 598 autoreload 31068 25356 Watching for file changes with StatReloader
+(2020-09-03 21:23:56,954) - INFO django.server: 157 basehttp 31068 22856 "GET /index/ HTTP/1.1" 200 120770
+(2020-09-03 21:24:31,487) - INFO django.utils.autoreload: 222 autoreload 31068 25356 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 21:24:32,606) - INFO django.utils.autoreload: 598 autoreload 30716 17080 Watching for file changes with StatReloader
+(2020-09-03 21:24:38,130) - INFO django.utils.autoreload: 222 autoreload 30716 17080 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 21:24:39,541) - INFO django.utils.autoreload: 598 autoreload 31528 4868 Watching for file changes with StatReloader
+(2020-09-03 21:24:46,881) - INFO django.server: 157 basehttp 31528 28956 "GET /index/ HTTP/1.1" 200 120767
+(2020-09-03 21:24:47,049) - INFO django.server: 157 basehttp 31528 28956 "GET /static/images/favicon.png HTTP/1.1" 200 1412
+(2020-09-03 21:25:38,784) - INFO django.server: 157 basehttp 31528 28956 "GET /index/ HTTP/1.1" 200 120773
+(2020-09-03 21:25:38,963) - INFO django.server: 157 basehttp 31528 28956 "GET /static/images/favicon.png HTTP/1.1" 200 1412
+(2020-09-03 21:25:54,904) - INFO django.server: 157 basehttp 31528 28956 "GET /index/?page=2 HTTP/1.1" 200 121121
+(2020-09-03 21:26:04,351) - INFO django.server: 157 basehttp 31528 28956 "GET /index/?page=3 HTTP/1.1" 200 121376
+(2020-09-03 21:26:15,340) - INFO django.server: 157 basehttp 31528 28956 "GET /index/?page=4 HTTP/1.1" 200 121089
+(2020-09-03 21:26:24,684) - INFO django.server: 157 basehttp 31528 28956 "GET /index/?page=5 HTTP/1.1" 200 120637
+(2020-09-03 21:26:38,200) - INFO django.server: 157 basehttp 31528 28956 "GET /index/?page=6 HTTP/1.1" 200 120693
+(2020-09-03 21:26:52,806) - INFO django.server: 157 basehttp 31528 28956 "GET /index/?page=7 HTTP/1.1" 200 121011
+(2020-09-03 21:27:00,621) - INFO django.server: 157 basehttp 31528 28956 "GET /index/?page=8 HTTP/1.1" 200 120401
+(2020-09-03 21:27:24,997) - INFO django.server: 157 basehttp 31528 28956 "GET /index/?page=9 HTTP/1.1" 200 120694
+(2020-09-03 21:27:34,839) - INFO django.server: 157 basehttp 31528 28956 "GET /index/?page=10 HTTP/1.1" 200 116779
+(2020-09-03 21:27:46,345) - INFO django.server: 157 basehttp 31528 28956 "GET /index/?page= HTTP/1.1" 200 120771
+(2020-09-03 21:28:02,834) - INFO django.server: 157 basehttp 31528 28956 "GET /index/?page=1 HTTP/1.1" 200 120775
+(2020-09-03 21:28:10,393) - INFO django.server: 157 basehttp 31528 28956 "GET /index/ HTTP/1.1" 200 120775
+(2020-09-03 21:28:43,730) - INFO django.server: 157 basehttp 31528 28956 "GET /index/ HTTP/1.1" 200 120779
+(2020-09-03 21:28:43,922) - INFO django.server: 157 basehttp 31528 28956 "GET /static/images/favicon.png HTTP/1.1" 200 1412
+(2020-09-03 21:29:22,262) - INFO django.utils.autoreload: 222 autoreload 31528 4868 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 21:29:23,387) - INFO django.utils.autoreload: 598 autoreload 3384 30512 Watching for file changes with StatReloader
+(2020-09-03 21:30:08,549) - INFO django.utils.autoreload: 222 autoreload 3384 30512 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 21:30:09,595) - INFO django.utils.autoreload: 598 autoreload 7544 2644 Watching for file changes with StatReloader
+(2020-09-03 21:30:38,107) - INFO django.server: 157 basehttp 7544 28988 "GET /index/ HTTP/1.1" 200 120785
+(2020-09-03 21:30:38,346) - INFO django.server: 157 basehttp 7544 28988 "GET /static/images/favicon.png HTTP/1.1" 200 1412
+(2020-09-03 21:31:31,245) - INFO django.server: 157 basehttp 7544 28988 "GET /index/ HTTP/1.1" 200 121172
+(2020-09-03 21:31:31,438) - INFO django.server: 157 basehttp 7544 28988 "GET /static/images/favicon.png HTTP/1.1" 200 1412
+(2020-09-03 21:31:51,993) - INFO django.server: 157 basehttp 7544 28988 "GET /index/ HTTP/1.1" 200 121177
+(2020-09-03 21:31:52,205) - INFO django.server: 157 basehttp 7544 28988 "GET /static/images/favicon.png HTTP/1.1" 200 1412
+(2020-09-03 21:32:33,806) - INFO django.server: 157 basehttp 7544 28988 "GET /index/ HTTP/1.1" 200 121140
+(2020-09-03 21:32:34,033) - INFO django.server: 157 basehttp 7544 28988 "GET /static/images/favicon.png HTTP/1.1" 200 1412
+(2020-09-03 21:32:54,849) - INFO django.server: 157 basehttp 7544 28988 "GET /index/ HTTP/1.1" 200 121147
+(2020-09-03 21:32:55,042) - INFO django.server: 157 basehttp 7544 28988 "GET /static/images/favicon.png HTTP/1.1" 200 1412
+(2020-09-03 21:33:09,350) - INFO django.server: 157 basehttp 7544 28988 "GET /index/ HTTP/1.1" 200 121147
+(2020-09-03 21:33:09,505) - INFO django.server: 157 basehttp 7544 28988 "GET /static/images/favicon.png HTTP/1.1" 200 1412
+(2020-09-03 21:34:45,437) - INFO django.utils.autoreload: 222 autoreload 7544 2644 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 21:34:46,576) - INFO django.utils.autoreload: 598 autoreload 23924 26948 Watching for file changes with StatReloader
+(2020-09-03 21:35:32,543) - INFO django.utils.autoreload: 222 autoreload 23924 26948 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 21:35:33,561) - INFO django.utils.autoreload: 598 autoreload 29920 30964 Watching for file changes with StatReloader
+(2020-09-03 21:35:52,850) - INFO django.server: 157 basehttp 29920 9244 "GET /index/ HTTP/1.1" 200 121149
+(2020-09-03 21:36:12,223) - INFO django.utils.autoreload: 222 autoreload 29920 30964 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 21:36:13,462) - INFO django.utils.autoreload: 598 autoreload 9300 23824 Watching for file changes with StatReloader
+(2020-09-03 21:36:16,618) - INFO django.utils.autoreload: 222 autoreload 9300 23824 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 21:36:17,727) - INFO django.utils.autoreload: 598 autoreload 19756 28612 Watching for file changes with StatReloader
+(2020-09-03 21:36:24,992) - ERROR django.request: 228 log 19756 21440 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py", line 185, in index
+    return render(request, 'mainapp/index.html', context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "G:\Code\Projects\CopyCat\venv\lib\site-packages\django\template\defaulttags.py", line 165, in render
+    values = list(values)
+TypeError: 'int' object is not iterable
+(2020-09-03 21:36:25,001) - ERROR django.server: 157 basehttp 19756 21440 "GET /index/ HTTP/1.1" 500 181015
+(2020-09-03 21:36:56,137) - INFO django.utils.autoreload: 222 autoreload 19756 28612 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 21:36:57,373) - INFO django.utils.autoreload: 598 autoreload 11640 26856 Watching for file changes with StatReloader
+(2020-09-03 21:37:05,418) - INFO django.server: 157 basehttp 11640 26612 "GET /index/ HTTP/1.1" 200 121148
+(2020-09-03 21:37:05,653) - INFO django.server: 157 basehttp 11640 26612 "GET /static/images/favicon.png HTTP/1.1" 200 1412
+(2020-09-03 21:37:40,473) - INFO django.utils.autoreload: 222 autoreload 11640 26856 G:\Code\Projects\CopyCat\CopyCat\mainapp\views.py changed, reloading.
+(2020-09-03 21:37:41,609) - INFO django.utils.autoreload: 598 autoreload 30936 29500 Watching for file changes with StatReloader
+(2020-09-03 21:39:34,080) - INFO django.server: 157 basehttp 30936 20968 "GET /index/ HTTP/1.1" 200 121157
+(2020-09-03 21:39:34,291) - INFO django.server: 157 basehttp 30936 20968 "GET /static/images/favicon.png HTTP/1.1" 200 1412
+(2020-09-03 21:40:06,722) - INFO django.server: 157 basehttp 30936 20968 "GET /index/ HTTP/1.1" 200 121156
+(2020-09-03 21:40:06,931) - INFO django.server: 157 basehttp 30936 20968 "GET /static/images/favicon.png HTTP/1.1" 200 1412
+(2020-09-03 21:40:22,474) - INFO django.server: 157 basehttp 30936 20968 "GET /index/ HTTP/1.1" 200 121166
+(2020-09-03 21:40:22,650) - INFO django.server: 157 basehttp 30936 20968 "GET /static/images/favicon.png HTTP/1.1" 200 1412
+(2020-09-03 21:40:34,976) - INFO django.server: 157 basehttp 30936 20968 "POST /index/bookmark/24364793/ HTTP/1.1" 204 0
+(2020-09-03 21:40:39,883) - INFO django.server: 157 basehttp 30936 20968 "POST /index/bookmark/24364137/ HTTP/1.1" 204 0
+(2020-09-03 21:40:40,986) - INFO django.server: 157 basehttp 30936 20968 "POST /index/bookmark/24363271/ HTTP/1.1" 204 0
+(2020-09-03 21:40:42,163) - INFO django.server: 157 basehttp 30936 20968 "POST /index/bookmark/24364080/ HTTP/1.1" 204 0
+(2020-09-03 21:40:43,284) - INFO django.server: 157 basehttp 30936 20968 "POST /index/bookmark/24363791/ HTTP/1.1" 204 0
+(2020-09-03 21:40:45,411) - INFO django.server: 157 basehttp 30936 20968 "POST /index/bookmark/24363963/ HTTP/1.1" 204 0
+(2020-09-03 21:40:46,511) - INFO django.server: 157 basehttp 30936 20968 "POST /index/bookmark/24363979/ HTTP/1.1" 204 0
+(2020-09-03 21:40:47,916) - INFO django.server: 157 basehttp 30936 20968 "POST /index/bookmark/24363871/ HTTP/1.1" 204 0
+(2020-09-03 21:40:49,147) - INFO django.server: 157 basehttp 30936 20968 "POST /index/bookmark/24364365/ HTTP/1.1" 204 0
+(2020-09-03 21:40:51,147) - INFO django.server: 157 basehttp 30936 20968 "POST /index/bookmark/24363774/ HTTP/1.1" 204 0
+(2020-09-03 21:40:54,342) - INFO django.server: 157 basehttp 30936 20968 "POST /index/marked-read/24363774/ HTTP/1.1" 204 0
+(2020-09-03 21:40:56,752) - INFO django.server: 157 basehttp 30936 20968 "POST /index/marked-read/24363715/ HTTP/1.1" 204 0
+(2020-09-03 21:40:58,204) - INFO django.server: 157 basehttp 30936 20968 "POST /index/marked-read/24363493/ HTTP/1.1" 204 0
+(2020-09-03 21:40:58,990) - INFO django.server: 157 basehttp 30936 20968 "POST /index/marked-read/24361744/ HTTP/1.1" 204 0
+(2020-09-03 21:41:05,240) - INFO django.server: 157 basehttp 30936 20968 "POST /index/deleteitem/24363127/ HTTP/1.1" 302 0
+(2020-09-03 21:41:07,610) - INFO django.server: 157 basehttp 30936 19496 "POST /index/deleteitem/24363069/ HTTP/1.1" 302 0
+(2020-09-03 21:41:09,929) - INFO django.server: 157 basehttp 30936 30780 "POST /index/deleteitem/24361957/ HTTP/1.1" 302 0
+(2020-09-03 21:41:10,821) - INFO django.server: 157 basehttp 30936 20968 "GET /index/ HTTP/1.1" 200 121350
+(2020-09-03 21:41:10,826) - ERROR django.server: 157 basehttp 30936 20968 "GET /index/ HTTP/1.1" 500 59
+(2020-09-03 21:41:14,389) - INFO django.server: 157 basehttp 30936 19496 "GET /index/ HTTP/1.1" 200 121350
+(2020-09-03 21:41:14,392) - ERROR django.server: 157 basehttp 30936 19496 "GET /index/ HTTP/1.1" 500 59
+(2020-09-03 21:41:16,463) - INFO django.server: 157 basehttp 30936 30780 "GET /index/ HTTP/1.1" 200 121350
+(2020-09-03 21:41:40,327) - INFO django.server: 157 basehttp 30936 30780 "GET /profile/aarav HTTP/1.1" 200 4104
+(2020-09-03 21:41:42,988) - INFO django.server: 157 basehttp 30936 30780 "GET /bookmark/ HTTP/1.1" 200 39044
+(2020-09-03 21:41:48,353) - INFO django.server: 157 basehttp 30936 30780 "POST /bookmark/remove/24364793 HTTP/1.1" 302 0
+(2020-09-03 21:41:48,383) - INFO django.server: 157 basehttp 30936 30780 "GET /bookmark/ HTTP/1.1" 200 36270
+(2020-09-03 21:41:54,677) - INFO django.server: 157 basehttp 30936 30780 "POST /bookmark/remove/24364137 HTTP/1.1" 302 0
+(2020-09-03 21:41:54,718) - INFO django.server: 157 basehttp 30936 30780 "GET /bookmark/ HTTP/1.1" 200 33461
+(2020-09-03 21:41:56,495) - INFO django.server: 157 basehttp 30936 30780 "POST /bookmark/remove/24363271 HTTP/1.1" 302 0
+(2020-09-03 21:41:56,554) - INFO django.server: 157 basehttp 30936 30780 "GET /bookmark/ HTTP/1.1" 200 30710
+(2020-09-03 21:41:58,105) - INFO django.server: 157 basehttp 30936 30780 "POST /bookmark/remove/24364080 HTTP/1.1" 302 0
+(2020-09-03 21:41:58,192) - INFO django.server: 157 basehttp 30936 30780 "GET /bookmark/ HTTP/1.1" 200 27930
+(2020-09-03 21:41:58,987) - INFO django.server: 157 basehttp 30936 30780 "POST /bookmark/remove/24363791 HTTP/1.1" 302 0
+(2020-09-03 21:41:59,030) - INFO django.server: 157 basehttp 30936 30780 "GET /bookmark/ HTTP/1.1" 200 25129
+(2020-09-03 21:41:59,880) - INFO django.server: 157 basehttp 30936 30780 "POST /bookmark/remove/24363963 HTTP/1.1" 302 0
+(2020-09-03 21:41:59,961) - INFO django.server: 157 basehttp 30936 30780 "GET /bookmark/ HTTP/1.1" 200 22423
+(2020-09-03 21:42:00,579) - INFO django.server: 157 basehttp 30936 30780 "POST /bookmark/remove/24363979 HTTP/1.1" 302 0
+(2020-09-03 21:42:00,603) - INFO django.server: 157 basehttp 30936 30780 "GET /bookmark/ HTTP/1.1" 200 19690
+(2020-09-03 21:42:01,566) - INFO django.server: 157 basehttp 30936 30780 "POST /bookmark/remove/24363871 HTTP/1.1" 302 0
+(2020-09-03 21:42:01,632) - INFO django.server: 157 basehttp 30936 30780 "GET /bookmark/ HTTP/1.1" 200 16911
+(2020-09-03 21:42:03,117) - INFO django.server: 157 basehttp 30936 30780 "GET /profile/aarav HTTP/1.1" 200 4104
+(2020-09-03 21:42:04,726) - INFO django.server: 157 basehttp 30936 30780 "GET /marked-read/ HTTP/1.1" 200 20013
+(2020-09-03 21:42:16,538) - INFO django.server: 157 basehttp 30936 30780 "GET /index/ HTTP/1.1" 200 121350
+(2020-09-03 21:44:12,840) - INFO django.server: 157 basehttp 30936 30780 "GET /index/?page=2 HTTP/1.1" 200 121486
+(2020-09-03 21:45:39,334) - INFO django.server: 157 basehttp 30936 16380 "GET /accounts/logout/ HTTP/1.1" 302 0
+(2020-09-03 21:45:39,796) - INFO django.server: 157 basehttp 30936 16380 "GET /accounts/login/ HTTP/1.1" 200 1898
