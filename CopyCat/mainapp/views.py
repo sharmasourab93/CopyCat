@@ -259,7 +259,6 @@ def bookmark_details(request, hid):
             return redirect('/bookmark/')
             
 
-
 # 12. Delete Item Logical Function Written.
 @login_required
 def deleteitem(request, hid):
