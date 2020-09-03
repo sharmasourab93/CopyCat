@@ -1,68 +1,110 @@
 {% extends 'mainapp/base.html' %}
 {% block content %}
 
-<div class="container-fluid songs-container">
-    {% if data %}
-    <center>
-        <ol class="nav nav-pills" style="margin-bottom: 10px;">
-            <table>
-                {% for d in data %}
-                    <li role="presentation" class="active">
-                        <div class="container-fluid">
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <span>{{ forloop.counter }}</span>
-                                        <span>&nbsp;</span>
-                                        <span>&nbsp;</span>
-                                        <span>&nbsp;</span>
-                                        <a href="{{d.url}}">{{ d.title }}</a>
-                                    </td>
-                                </tr>
-                                <tr style="font-size:12px;">
-                                    <span>&nbsp;&nbsp;&nbsp;</span>
-                                    <td>
-                                        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                        <a href="https://news.ycombinator.com/item?id={{d.hid}}">{{d.comments}} comments </a> by <a href="#">{{d.author}}</a>
-                                        posted {{d.posted_on}} | Upvotes {{d.upvotes}}
-                                    </td>
-
-                                        <td>
-                                            <form action="marked-read/{{d.hid}}/" method="POST" class="icon-color-green">
-                                                {% csrf_token %}
-                                                <button type="submit" value="Read" title="Read" aria-label="Read">
-                                                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-                                                </button>
-                                            </form>
-                                        </td>
-
-                                        <td>
-                                            <form action="bookmark/{{d.hid}}/" method="POST" class="icon-color-green">
-                                                <button type="submit" title="Bookmark">
-                                                    {% csrf_token %}
-                                                    <span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
-                                                </button>
-                                            </form>
-                                        </td>
-
-                                        <td>
-                                            <form action="deleteitem/{{d.hid}}/" method="POST" class="icon-color-red">
-                                                {% csrf_token %}
-                                                <button type="submit" title="Delete">
-                                                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                                                </button>
-                                            </form>
-                                        </td>
-                                </tr>
-                                <tr style="height:10px;"></tr>
-                            </tbody>
-                        </div>
-                    </li>
-                {% endfor %}
-            </table>
-        </ol>
+<div class="container-fluid container news-container">
+    {% if obj %}
         <center>
+            <strong class="sub-heading">You are on Page {{page}} of {{page_end}}</strong><br/>
+            {% if obj.has_previous %}
+                <strong><a href="?page={{obj.previous_page_number}}">
+                    <span class="current"><</span>
+                </a></strong>&nbsp;
+            {% else %}
+                <strong><a>
+                    <span class="previous"><</span>
+                </a></strong>&nbsp;
+            {% endif %}
+            {% for d in page_range %}
+                <strong><a href="?page={{d}}">{{d}}</a></strong> &nbsp;
+            {% endfor %}
+            {% if obj.has_next %}
+                <strong><a href="?page={{obj.next_page_number}}">
+                    <span class="current"> > </span>
+                </a></strong>
+            {% else %}
+                <strong><a>
+                    <span class="previous"> > </span>
+                </a></strong>
+            {% endif %}
+            <ol class="nav nav-pills" style="margin-bottom: 10px;">
+                <table>
+                    {% for d in obj %}
+                        <li role="presentation" class="active">
+                            <div class="container-fluid">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <span>{{ forloop.counter }}</span>
+                                            <span>&nbsp;</span>
+                                            <span>&nbsp;</span>
+                                            <span>&nbsp;</span>
+                                            <a href="{{d.url}}">{{ d.title }}</a>
+                                        </td>
+                                    </tr>
+                                    <tr style="font-size:12px;">
+                                        <span>&nbsp;&nbsp;&nbsp;</span>
+                                        <td>
+                                            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                            <a href="https://news.ycombinator.com/item?id={{d.hid}}">{{d.comments}} comments </a> by <a href="#">{{d.author}}</a>
+                                            posted {{d.posted_on}} | Upvotes {{d.upvotes}}
+                                        </td>
+                                            <td>
+                                                <form action="marked-read/{{d.hid}}/" method="POST" class="icon-color-green">
+                                                    {% csrf_token %}
+                                                    <button type="submit" value="Read" title="Read" aria-label="Read">
+                                                        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                                    </button>
+                                                </form>
+                                            </td>
+                                            <td>
+                                                <form action="bookmark/{{d.hid}}/" method="POST" class="icon-color-green">
+                                                    <button type="submit" title="Bookmark">
+                                                        {% csrf_token %}
+                                                        <span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
+                                                    </button>
+                                                </form>
+                                            </td>
+                                            <td>
+                                                <form action="deleteitem/{{d.hid}}/" method="POST" class="icon-color-red">
+                                                    {% csrf_token %}
+                                                    <button type="submit" title="Delete">
+                                                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                                    </button>
+                                                </form>
+                                            </td>
+                                    </tr>
+                                    <tr style="height:10px;"></tr>
+                                </tbody>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </table>
+            </ol>
+            {% if obj.has_previous %}
+                <strong><a href="?page={{obj.previous_page_number}}">
+                    <span class="current"><</span>
+                </a></strong>&nbsp;
+            {% else %}
+                <strong><a>
+                    <span class="previous"><</span>
+                </a></strong>&nbsp;
+            {% endif %}
+            {% for d in page_range %}
+                <strong><a href="?page={{d}}">{{d}}</a></strong> &nbsp;
+            {% endfor %}
+            {% if obj.has_next %}
+                <strong><a href="?page={{obj.next_page_number}}">
+                    <span class="current"> > </span>
+                </a></strong>
+            {% else %}
+                <strong><a>
+                    <span class="previous"> > </span>
+                </a></strong>
+            {% endif %}
+            <strong><a>| Page {{page}}/{{page_end}}</a></strong><br/>
+            <span>&nbsp;</span> <br/>
+        </center>
     {% else %}
         No Items. Working on it.
     {% endif %}

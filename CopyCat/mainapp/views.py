@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, HttpResponse
 from django.http import HttpResponseForbidden
 from django.db.utils import IntegrityError
 from django.core.exceptions import ObjectDoesNotExist
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 # Imports related to Auth
 from django.contrib import messages
@@ -160,7 +161,27 @@ def index(request):
     obj = NewsFeed.objects.order_by("posted_on").reverse()
     obj = obj.exclude(id__in=userdel)
     
-    context = {'data': obj}
+    query_set = Paginator(obj, 30)
+    context = dict()
+    
+    page = request.GET.get('page')
+    
+    try:
+        query_page = query_set.page(page)
+        
+    except PageNotAnInteger:
+        query_page = query_set.page(1)
+        
+    except EmptyPage:
+        query_page = query_set.page(query_set.num_pages)
+        
+    finally:
+        context['obj'] = query_page
+        
+    context['page'] = 1 if page is None else page
+    context['page_end'] = query_set.num_pages
+    context['page_range'] = 10 if query_set.page_range[-1] > 10 else query_set.page_range
+    
     return render(request, 'mainapp/index.html', context)
 
 
