@@ -37,8 +37,8 @@
                                         </td>-->
 
                                     <td>
-                                        <form action="remove/{{d.hid}}" method="GET" class="icon-color-green">
-
+                                        <form action="remove/{{d.hid}}" method="POST" class="icon-color-green">
+                                            {% csrf_token %}
                                             <button type="submit" title="Bookmark">
                                                 <span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
                                             </button>

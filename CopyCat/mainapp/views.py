@@ -238,24 +238,26 @@ def bookmark_details(request, hid):
     prof = Profile.objects.get(user=user)
 
     if request.user.is_active and request.method == 'POST':
-        try:
-            user_read = Bookmarks.objects.get(hack_id=nfd, user=prof)
-            
-        except ObjectDoesNotExist:
-            user_read = Bookmarks(user=prof, hack_id=nfd)
-            user_read.save()
-            
-        return HttpResponse(status=204)
-    
-    elif request.user.is_active and request.method == 'GET':
-
-        try:
-            user_read = Bookmarks.objects.get(hack_id=nfd, user=prof)
-            user_read.delete()
+        if 'remove' not in request.META['PATH_INFO']:
+            try:
+                user_read = Bookmarks.objects.get(hack_id=nfd, user=prof)
+                
+            except ObjectDoesNotExist:
+                user_read = Bookmarks(user=prof, hack_id=nfd)
+                user_read.save()
+                
             return HttpResponse(status=204)
-        
-        except ObjectDoesNotExist:
+    
+        else:
+            try:
+                user_read = Bookmarks.objects.get(hack_id=nfd, user=prof)
+                user_read.delete()
+            
+            except ObjectDoesNotExist:
+                pass
+
             return redirect('/bookmark/')
+            
 
 
 # 12. Delete Item Logical Function Written.
