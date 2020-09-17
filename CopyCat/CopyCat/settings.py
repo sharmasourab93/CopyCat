@@ -24,9 +24,9 @@ print(BASE_DIR)
 SECRET_KEY = '#--yn!1sb7i6#w3t0brny8c#@ww49!sxw)wm+@6(n5@0=z8t9-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', '192.168.43.65']
 
 
 # Application definition
